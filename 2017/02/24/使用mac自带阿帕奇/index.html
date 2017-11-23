@@ -5,17 +5,17 @@
   
   <title>使用mac自带阿帕奇 | Don&#39;t BB,show me the code!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="简介Apache对于前端程序员来说是必不可少的一款web服务器，Mac系统自身带了apache，可以直接用来搭建本地web服务器，配置过程相对比较简单，本文将做简要描述，开始吧 启动Apachemac是默认自动启动Apache的，判断mac是否启动了Apache很简单，浏览器地址栏输入http://127.0.0.1回车即可，如果页面显示It works！证明ok，介绍几个常用命令： 12345s">
+  <meta name="description" content="简介Apache对于前端程序员来说是必不可少的一款web服务器，Mac系统自身带了apache，可以直接用来搭建本地web服务器，配置过程相对比较简单，本文将做简要描述，开始吧 启动Apachemac是默认自动启动Apache的，判断mac是否启动了Apache很简单，浏览器地址栏输入http://127.0.0.1   回车即可，如果页面显示It works！证明ok，介绍几个常用命令： 123">
 <meta name="keywords" content="mac,服务器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用mac自带阿帕奇">
 <meta property="og:url" content="http://NicolasGui.github.io/2017/02/24/使用mac自带阿帕奇/index.html">
 <meta property="og:site_name" content="Don&#39;t BB,show me the code!">
-<meta property="og:description" content="简介Apache对于前端程序员来说是必不可少的一款web服务器，Mac系统自身带了apache，可以直接用来搭建本地web服务器，配置过程相对比较简单，本文将做简要描述，开始吧 启动Apachemac是默认自动启动Apache的，判断mac是否启动了Apache很简单，浏览器地址栏输入http://127.0.0.1回车即可，如果页面显示It works！证明ok，介绍几个常用命令： 12345s">
-<meta property="og:updated_time" content="2017-11-23T03:33:49.000Z">
+<meta property="og:description" content="简介Apache对于前端程序员来说是必不可少的一款web服务器，Mac系统自身带了apache，可以直接用来搭建本地web服务器，配置过程相对比较简单，本文将做简要描述，开始吧 启动Apachemac是默认自动启动Apache的，判断mac是否启动了Apache很简单，浏览器地址栏输入http://127.0.0.1   回车即可，如果页面显示It works！证明ok，介绍几个常用命令： 123">
+<meta property="og:updated_time" content="2017-11-23T07:37:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用mac自带阿帕奇">
-<meta name="twitter:description" content="简介Apache对于前端程序员来说是必不可少的一款web服务器，Mac系统自身带了apache，可以直接用来搭建本地web服务器，配置过程相对比较简单，本文将做简要描述，开始吧 启动Apachemac是默认自动启动Apache的，判断mac是否启动了Apache很简单，浏览器地址栏输入http://127.0.0.1回车即可，如果页面显示It works！证明ok，介绍几个常用命令： 12345s">
+<meta name="twitter:description" content="简介Apache对于前端程序员来说是必不可少的一款web服务器，Mac系统自身带了apache，可以直接用来搭建本地web服务器，配置过程相对比较简单，本文将做简要描述，开始吧 启动Apachemac是默认自动启动Apache的，判断mac是否启动了Apache很简单，浏览器地址栏输入http://127.0.0.1   回车即可，如果页面显示It works！证明ok，介绍几个常用命令： 123">
   
     <link rel="alternative" href="/atom.xml" title="Don&#39;t BB,show me the code!" type="application/atom+xml">
   
@@ -308,7 +308,7 @@
                                             
                                                                         
                                                                                     <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Apache对于前端程序员来说是必不可少的一款web服务器，Mac系统自身带了apache，可以直接用来搭建本地web服务器，配置过程相对比较简单，本文将做简要描述，开始吧</p>
-<h3 id="启动Apache"><a href="#启动Apache" class="headerlink" title="启动Apache"></a>启动Apache</h3><p>mac是默认自动启动Apache的，判断mac是否启动了Apache很简单，浏览器地址栏输入<a href="http://127.0.0.1回车即可，如果页面显示It" target="_blank" rel="external">http://127.0.0.1回车即可，如果页面显示It</a> works！证明ok，介绍几个常用命令：</p>
+<h3 id="启动Apache"><a href="#启动Apache" class="headerlink" title="启动Apache"></a>启动Apache</h3><p>mac是默认自动启动Apache的，判断mac是否启动了Apache很简单，浏览器地址栏输入<a href="http://127.0.0.1" target="_blank" rel="external">http://127.0.0.1</a>   回车即可，如果页面显示It works！证明ok，介绍几个常用命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo apachectl start   //开启apache</div><div class="line"></div><div class="line">sudo apachectl restart   //重启apache</div><div class="line"></div><div class="line">sudo apachectl stop    //关闭apache:</div></pre></td></tr></table></figure>
 <h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><h4 id="更改work-space"><a href="#更改work-space" class="headerlink" title="更改work space"></a>更改work space</h4><p>Apache在Windows下默认work space为htdocs，在mac下有所区别，路径为：/Library/WebServer/Documents<br>因此我们需要把前端代码拷贝到该目录进行测试，但是该目录藏这么深在实际使用过程中显然是比较麻烦的，因此接下来我们通过修改阿帕奇主配置文件httpd.conf来指定work space，步骤如下：<br>mac配置文件目录为：/etc ，默认是隐藏的，因此咱们在终端里面执行：open /etc/apache2/  就可以打开Apache主目录，找到httpd.conf文件，使用文本编辑器打开该文件， 如果不想那么麻烦的话可以使用vi编辑，命令如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vi /etc/apache2/httpd.conf</div></pre></td></tr></table></figure>
@@ -391,7 +391,7 @@
             2017年02月24日 - 15时02分
         </p>
         <p><span>最后更新:</span>
-            2017年11月23日 - 11时33分
+            2017年11月23日 - 15时37分
         </p>
 
 
