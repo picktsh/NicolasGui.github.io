@@ -3,14 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Don&#39;t BB,show me the code!</title>
+  <title>使用mac自带阿帕奇 | Don&#39;t BB,show me the code!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Don&#39;t BB,show me the code!">
-<meta property="og:url" content="http://NicolasGui.github.io/index.html">
+  <meta name="description" content="简介Apache对于前端程序员来说是必不可少的一款web服务器，Mac系统自身带了apache，可以直接用来搭建本地web服务器，配置过程相对比较简单，本文将做简要描述，开始吧 启动Apachemac是默认自动启动Apache的，判断mac是否启动了Apache很简单，浏览器地址栏输入http://127.0.0.1回车即可，如果页面显示It works！证明ok，介绍几个常用命令： 12345s">
+<meta name="keywords" content="mac,服务器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用mac自带阿帕奇">
+<meta property="og:url" content="http://NicolasGui.github.io/2017/02/24/使用mac自带阿帕奇/index.html">
 <meta property="og:site_name" content="Don&#39;t BB,show me the code!">
+<meta property="og:description" content="简介Apache对于前端程序员来说是必不可少的一款web服务器，Mac系统自身带了apache，可以直接用来搭建本地web服务器，配置过程相对比较简单，本文将做简要描述，开始吧 启动Apachemac是默认自动启动Apache的，判断mac是否启动了Apache很简单，浏览器地址栏输入http://127.0.0.1回车即可，如果页面显示It works！证明ok，介绍几个常用命令： 12345s">
+<meta property="og:updated_time" content="2017-11-23T03:33:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Don&#39;t BB,show me the code!">
+<meta name="twitter:title" content="使用mac自带阿帕奇">
+<meta name="twitter:description" content="简介Apache对于前端程序员来说是必不可少的一款web服务器，Mac系统自身带了apache，可以直接用来搭建本地web服务器，配置过程相对比较简单，本文将做简要描述，开始吧 启动Apachemac是默认自动启动Apache的，判断mac是否启动了Apache很简单，浏览器地址栏输入http://127.0.0.1回车即可，如果页面显示It works！证明ok，介绍几个常用命令： 12345s">
   
     <link rel="alternative" href="/atom.xml" title="Don&#39;t BB,show me the code!" type="application/atom+xml">
   
@@ -21,9 +26,6 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  
-    
-    
   
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
@@ -36,8 +38,8 @@
           rootUrl: '/',
           fancybox: true,
           animate: false,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -263,124 +265,7 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-Hexo+Github搭建个人博客" class="article article-type-post" itemscope itemprop="blogPost">
-    
-        <div class="article-meta">
-            <a href="/2017/10/26/Hexo+Github搭建个人博客/" class="article-date">
-      <time datetime="2017-10-26T07:19:12.000Z" itemprop="datePublished">2017-10-26</time>
-</a>
-        </div>
-        
-            <div class="article-inner">
-                
-                    <input type="hidden" class="isFancy" />
-                    
-                        
-                            <header class="article-header">
-                                
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/26/Hexo+Github搭建个人博客/">Hexo+Github搭建个人博客</a>
-    </h1>
-  
-
-                            </header>
-                            
-                                    
-                                        <div class="article-entry" itemprop="articleBody">
-                                            
-                                                                        
-                                                                                    <p>欢迎来到我的博客驿站，本站是使用Hexo+Github基于基于Node.js的静态博客框架, 官方文档请参考<a href="https://hexo.io" target="_blank" rel="external">Hexo</a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h3><h4 id="安装Node（基础环境）"><a href="#安装Node（基础环境）" class="headerlink" title="安装Node（基础环境）"></a>安装Node（基础环境）</h4><p><a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node官网</a>你可以根据不同平台系统选择你需要的Node.js安装包<br>注意：Linux上安装Node.js需要安装Python 2.6 或 2.7 ，不建议安装Python 3.0以上版本。</p>
-<h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p>目的：把本地的hexo内容提交到github上去.首先去<a href="http://www.github.com" target="_blank" rel="external">GitHub</a>申请个人账号，以便后期用来做博客的远程创库、域名、服务器之类的，github账号不再啰嗦了,跟一般的注册账号差不多，方便起见，顺便配置SSH Keys</p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>开始之前，先切换NPM源， 解释一下，NPM是随同 NodeJS 一起安装的包管理工具，我们经常使用它来下载第三方包到本地。<br>但在使用 NPM 过程很多人估计都知道，在国内下载第三方包的速度极其之慢。因此推荐使用淘宝 NPM 镜像，它是一个完整 npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟 ，操作如下：<br>终端/CMD里面：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure></p>
-<p>如此一来就可以使用 cnpm 命令来安装模块了：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cnpm install xxxx</div></pre></td></tr></table></figure></p>
-<p>接下来开始安装Hexo，首先在你个人的workspace创建博客文件夹，如myblog<br>然后cd到myblog里安装Hexo：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cnpm install -g hexo-cli</div></pre></td></tr></table></figure></p>
-<p>接下来执行init命令初始化你的hexo：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure></p>
-<p>至此，安装工作顺利完成！myblog就是你以后写博客的目录，所有的操作都在里面进行。</p>
-<h3 id="生成博客"><a href="#生成博客" class="headerlink" title="生成博客"></a>生成博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div></pre></td></tr></table></figure>
-<h3 id="预览博客"><a href="#预览博客" class="headerlink" title="预览博客"></a>预览博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo s</div></pre></td></tr></table></figure>
-<p>接下来在浏览器地址栏输入：localhost:4000回车就可以预览你的博客了</p>
-<h3 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div></pre></td></tr></table></figure>
-<h3 id="托管到gitHub"><a href="#托管到gitHub" class="headerlink" title="托管到gitHub"></a>托管到gitHub</h3><h4 id="创建repository"><a href="#创建repository" class="headerlink" title="创建repository"></a>创建repository</h4><p>创建一个与自己用户名同名的repository<br>在自己Github主页右下角，创建一个新的repository。比如我的Github账号是NicolasGui，那么我应该创建的repository名字应该是NicolasGui.github.io。</p>
-<h4 id="添加git配置"><a href="#添加git配置" class="headerlink" title="添加git配置"></a>添加git配置</h4><p>首先在主题的配置文件_config.yml里面添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: http://github.com/NicolasGui/NicolasGui.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
-<p>repository：就是你的gitHub同名仓库的地址</p>
-<h4 id="代码上传"><a href="#代码上传" class="headerlink" title="代码上传"></a>代码上传</h4><p>安装 hexo-deployer-git依赖包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
-<p>然后使用如下命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure>
-<p>此时你可以在浏览器地址栏输入 “用户名.github.io.git”来访问你的个人博客<br>(用户名：你gitHub的用户名)</p>
-<h3 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h3><h4 id="域名申请"><a href="#域名申请" class="headerlink" title="域名申请"></a>域名申请</h4><p>域名申请的途径非常多，建议使用<a href="http://www.aliyun.com" target="_blank" rel="external">阿里云</a>的，方便后期备案，在阿里云购买了域名之后，到域名管理中心进行域名解析，添加以下几条记录值：</p>
-<table>
-<thead>
-<tr>
-<th>记录类型</th>
-<th>主机记录</th>
-<th>解析线路(isp)</th>
-<th>记录值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CNAME</td>
-<td>www</td>
-<td>默认</td>
-<td>用户名.github.io</td>
-</tr>
-<tr>
-<td>A</td>
-<td>@</td>
-<td>默认</td>
-<td>192.30.252.153</td>
-</tr>
-<tr>
-<td>A</td>
-<td>@</td>
-<td>默认</td>
-<td>192.30.252.154</td>
-</tr>
-</tbody>
-</table>
-<p>接下来在public目录新建名为CNAME的文件，注意，没有后缀名<br>然后在CNAME文件里面填写你的域名，如：xxx.com   注意：不带www也不带http，只需要域名就好<br>接下来分别执行hexo g重新生成一下博客<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g</div></pre></td></tr></table></figure></p>
-<p>然后再上传到git<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure></p>
-<p>之后就可以使用域名访问你的个人博客了</p>
-
-                                                                                        
-                                                                                            
-                                        </div>
-                                        
-                                            <div class="article-info article-info-index">
-                                                
-                                                        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a><a class="article-category-link" href="/categories/Hexo/Github/">Github</a>
-    </div>
-
-
-                                                            
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
-    </div>
-
-                                                                
-                                                                        <div class="clearfix"></div>
-                                            </div>
-                                            
-            </div>
-            
-</article>
-
-            
-                        
-                                    
-                                                
-
-                                                                                                    
-
-                                                                                                        
-  
-    <article id="post-使用mac自带阿帕奇" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-使用mac自带阿帕奇" class="article article-type-post" itemscope itemprop="blogPost">
     
         <div class="article-meta">
             <a href="/2017/02/24/使用mac自带阿帕奇/" class="article-date">
@@ -396,13 +281,28 @@
                             <header class="article-header">
                                 
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/24/使用mac自带阿帕奇/">使用mac自带阿帕奇</a>
+    <h1 class="article-title" itemprop="name">
+      使用mac自带阿帕奇
     </h1>
   
 
                             </header>
                             
+                                <div class="article-info article-info-post">
+                                    
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/mac/">mac</a><a class="article-category-link" href="/categories/mac/服务器/">服务器</a>
+    </div>
+
+
+                                        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
+    </div>
+
+                                            <div class="clearfix"></div>
+                                </div>
+                                
                                     
                                         <div class="article-entry" itemprop="articleBody">
                                             
@@ -419,109 +319,225 @@
 
                                                                                         
                                                                                             
+                                                                                                <div class="page-reward">
+                                                                                                    <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+                                                                                                    <div class="hide_box"></div>
+                                                                                                    <div class="shang_box">
+                                                                                                        <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+                                                                                                        <div class="shang_tit">
+                                                                                                            <p>
+                                                                                                                真要扫么？
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                        <div class="shang_payimg">
+                                                                                                            <img src="/img/alipayimg.png" alt="扫码支持" title="扫一扫" />
+
+                                                                                                        </div>
+                                                                                                        <div class="pay_explain">
+                                                                                                            纯属好玩儿，不要当真
+                                                                                                        </div>
+                                                                                                        <div class="shang_payselect">
+                                                                                                            
+                                                                                                                <div class="pay_item checked" data-id="alipay">
+                                                                                                                    <span class="radiobox"></span>
+                                                                                                                    <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                                                                                                                </div>
+                                                                                                                
+                                                                                                                    
+                                                                                                                        <div class="pay_item" data-id="wechat">
+                                                                                                                            <span class="radiobox"></span>
+                                                                                                                            <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                                                                                                                        </div>
+                                                                                                                        
+                                                                                                        </div>
+                                                                                                        <div class="shang_info">
+                                                                                                            <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+                                                                                                <script type="text/javascript">
+                                                                                                    $(".pay_item").click(function() {
+                                                                                                        $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+                                                                                                        var dataid = $(this).attr('data-id');
+                                                                                                        $(".shang_payimg img").attr("src", "/img/" + dataid + "img.png");
+                                                                                                        $("#shang_pay_txt").text(dataid == "alipay" ? "支付宝" : "微信");
+                                                                                                    });
+
+                                                                                                    function dashangToggle() {
+
+                                                                                                        $(".hide_box").fadeToggle();
+                                                                                                        $(".shang_box").fadeToggle();
+                                                                                                    }
+                                                                                                </script>
+                                                                                                
                                         </div>
                                         
-                                            <div class="article-info article-info-index">
-                                                
-                                                        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/mac/">mac</a><a class="article-category-link" href="/categories/mac/服务器/">服务器</a>
-    </div>
-
-
-                                                            
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
-    </div>
-
-                                                                
-                                                                        <div class="clearfix"></div>
-                                            </div>
-                                            
             </div>
             
-</article>
-
-            
-                        
-                                    
-                                                
-
-                                                                                                    
-
-                                                                                                        
-  
-    <article id="post-vue-router" class="article article-type-post" itemscope itemprop="blogPost">
-    
-        <div class="article-meta">
-            <a href="/2017/01/26/vue-router/" class="article-date">
-      <time datetime="2017-01-26T07:02:29.000Z" itemprop="datePublished">2017-01-26</time>
-</a>
-        </div>
-        
-            <div class="article-inner">
                 
-                    <input type="hidden" class="isFancy" />
+    <div class="copyright">
+        <p><span>本文标题:</span>
+            <a href="/2017/02/24/使用mac自带阿帕奇/">
+                使用mac自带阿帕奇
+            </a>
+        </p>
+        <p><span>文章作者:</span>
+            <a href="/" title="访问 Nicolas 的个人博客">
+                Nicolas
+            </a>
+        </p>
+        <p><span>发布时间:</span>
+            2017年02月24日 - 15时02分
+        </p>
+        <p><span>最后更新:</span>
+            2017年11月23日 - 11时33分
+        </p>
+
+
+    </div>
+    
+
+        
+            <nav id="article-nav">
+                
+                    <a href="/2017/10/26/Hexo+Github搭建个人博客/" id="article-nav-newer" class="article-nav-link-wrap">
+                        <strong class="article-nav-caption"><</strong>
+                        <div class="article-nav-title">
+                            
+                                Hexo+Github搭建个人博客
+                                    
+                        </div>
+                    </a>
                     
                         
-                            <header class="article-header">
-                                
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/26/vue-router/">vue-router插件</a>
-    </h1>
-  
-
-                            </header>
+                            <a href="/2017/01/26/vue-router/" id="article-nav-older" class="article-nav-link-wrap">
+                                <div class="article-nav-title">
+                                    vue-router插件
+                                </div>
+                                <strong class="article-nav-caption">></strong>
+                            </a>
                             
-                                    
-                                        <div class="article-entry" itemprop="articleBody">
-                                            
-                                                                        
-                                                                                    <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>vue-router就是SPA（单页应用）的路径管理器。通俗的说，vue-router就是我们WebApp的链接路径管理系统。它跟前端的a标签区别是什么？因为我们用Vue做的是单页应用，就相当于只有一个主的index.html页面，所以你写的a标签是不起作用的，你必须使用vue-router来对路径进行管理。</p>
-<h3 id="安装vue-router"><a href="#安装vue-router" class="headerlink" title="安装vue-router"></a>安装vue-router</h3><p>vue-router是一个插件，所以需要用npm来进行安装的。在命令行工具里面，进入你的项目目录，输入下面命令。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install vue-router --save</div></pre></td></tr></table></figure></p>
-<p>如果你是通过vue-cli构建项目时已经选择安装了vue-router，那就不需要重复安装。如果npm install vue-router –save安装比较慢的话，切换到淘宝镜像然后使用cnpm install vue-router –save，切换方法如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure></p>
-<h3 id="vue-router文件解读"><a href="#vue-router文件解读" class="headerlink" title="vue-router文件解读"></a>vue-router文件解读</h3><p>安装完vue-router，我们先在src/router/路径下找到index.js文件，这个js就是路由的核心文件，打开<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">import Vue from <span class="string">'vue'</span>   //引入Vue</div><div class="line">import Router from <span class="string">'vue-router'</span>  //引入vue-router</div><div class="line">import Hello from <span class="string">'@/components/Hello'</span>  //引入默认的Hello.vue组件</div><div class="line">import Test from <span class="string">'@/components/Test'</span>  //引入测试vue组件</div><div class="line"></div><div class="line">Vue.use(Router)  //全局使用Router</div><div class="line"> </div><div class="line"><span class="built_in">export</span> default new Router(&#123;//配置路由</div><div class="line">  routes: [              </div><div class="line">    &#123;                    //每一个对象代表一个路由</div><div class="line">      path: <span class="string">'/'</span>,         //链接路径</div><div class="line">      name: <span class="string">'Hello'</span>,     //路由名称，</div><div class="line">      component: Hello   //对应的组件模板</div><div class="line">    &#125;,&#123;</div><div class="line">      path:<span class="string">'/Test'</span>,</div><div class="line">      name:<span class="string">'Test'</span>,</div><div class="line">      component:Test</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-<p>然后我们就可以在App.vue里面通过router-view来展示我们的组件内容</p>
-<h3 id="router-link"><a href="#router-link" class="headerlink" title="router-link"></a>router-link</h3><p>我们说router是做路径管理的，那么我们就可以通过router-link来控制组件的切换<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;router-link to=<span class="string">"组件路径"</span>&gt;链接内容&lt;/router-link&gt;</div></pre></td></tr></table></figure></p>
-<p>在这里解释一下，to：是我们的导航路径，要填写的是你在router/index.js文件里配置的path值，如果要导航到默认首页，只需要写成  to=”/” ，比如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;ul&gt;</div><div class="line">   &lt;li&gt;&lt;router-link to=<span class="string">"/"</span>&gt;首页&lt;/router-link&gt;&lt;/li&gt;</div><div class="line">   &lt;li&gt;&lt;router-link to=<span class="string">"/Test"</span>&gt;Test页面&lt;/router-link&gt;&lt;/li&gt;   </div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure></p>
-
-                                                                                        
-                                                                                            
-                                        </div>
-                                        
-                                            <div class="article-info article-info-index">
-                                                
-                                                        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/vue/">vue</a><a class="article-category-link" href="/categories/vue/web前端/">web前端</a>
-    </div>
-
-
-                                                            
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web前端/">web前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/路由/">路由</a></li></ul>
-    </div>
-
-                                                                
-                                                                        <div class="clearfix"></div>
-                                            </div>
-                                            
-            </div>
+            </nav>
             
+                    
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动Apache"><span class="toc-number">2.</span> <span class="toc-text">启动Apache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本配置"><span class="toc-number">3.</span> <span class="toc-text">基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#更改work-space"><span class="toc-number">3.1.</span> <span class="toc-text">更改work space</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#更改默认端口"><span class="toc-number">3.2.</span> <span class="toc-text">更改默认端口</span></a></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+        
             
                         
+                            <div class="bdsharebuttonbox">
+    <a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdMiniList": false,
+            "bdPic": "",
+            "bdStyle": "2",
+            "bdSize": "24"
+        },
+        "share": {}
+    };
+    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+</script>
+                                
                                     
                                                 
+                                                    
+                                                                        <div id="gitments"></div>
+<script src="/js/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+      id: window.location.pathname,
+      owner: 'NicolaGui',
+      repo: 'NicolasGui.github.io',
+      oauth: {
+        client_id: '9e8ed2e47948d61bb71c',
+        client_secret: 'f3f96d1d6b51831d49b37f3f5e2463f3157bfb57',
+      },
+    })
+    gitment.render('gitments')
+</script>
+                                                                            
+                                                                                                
 
                                                                                                     
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/10/26/Hexo+Github搭建个人博客/" title="上一篇: Hexo+Github搭建个人博客">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2017/01/26/vue-router/" title="下一篇: vue-router插件">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/10/26/Hexo+Github搭建个人博客/">Hexo+Github搭建个人博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/24/使用mac自带阿帕奇/">使用mac自带阿帕奇</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/26/vue-router/">vue-router插件</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
 
                                                                                                         
-  
-  
-</div>
+                                                                                                            <script>
+                                                                                                                
+                                                                                                            </script>
+                                                                                                            </div>
       <footer id="footer">
     <div class="outer">
         <div id="footer-info">
