@@ -75,9 +75,9 @@
     
       <category term="All" scheme="http://NicolasGui.github.io/tags/All/"/>
     
-      <category term="开发工具" scheme="http://NicolasGui.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="web前端" scheme="http://NicolasGui.github.io/tags/web%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="开发工具" scheme="http://NicolasGui.github.io/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -137,9 +137,9 @@
     
       <category term="All" scheme="http://NicolasGui.github.io/tags/All/"/>
     
-      <category term="web前端" scheme="http://NicolasGui.github.io/tags/web%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="vue" scheme="http://NicolasGui.github.io/tags/vue/"/>
+    
+      <category term="web前端" scheme="http://NicolasGui.github.io/tags/web%E5%89%8D%E7%AB%AF/"/>
     
       <category term="路由" scheme="http://NicolasGui.github.io/tags/%E8%B7%AF%E7%94%B1/"/>
     
