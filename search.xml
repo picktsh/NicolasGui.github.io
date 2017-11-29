@@ -62,6 +62,8 @@
       
         <categories>
             
+            <category> All </category>
+            
             <category> Hexo </category>
             
             <category> Github </category>
@@ -70,6 +72,8 @@
         
         
         <tags>
+            
+            <tag> All </tag>
             
             <tag> Hexo </tag>
             
@@ -96,6 +100,8 @@
       
         <categories>
             
+            <category> All </category>
+            
             <category> mac </category>
             
             <category> 服务器 </category>
@@ -104,6 +110,8 @@
         
         
         <tags>
+            
+            <tag> All </tag>
             
             <tag> mac </tag>
             
@@ -127,6 +135,8 @@
       
         <categories>
             
+            <category> All </category>
+            
             <category> vue </category>
             
             <category> web前端 </category>
@@ -135,6 +145,8 @@
         
         
         <tags>
+            
+            <tag> All </tag>
             
             <tag> vue </tag>
             
