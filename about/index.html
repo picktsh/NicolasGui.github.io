@@ -73,7 +73,7 @@
             <li class="waves-block waves-effect">
               <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
-                主页
+                Home
               </a>
             </li>
         
@@ -108,7 +108,7 @@
             <li class="waves-block waves-effect">
               <a href="/About"  >
                 <i class="icon icon-lg icon-link"></i>
-                关于
+                About
               </a>
             </li>
         
@@ -171,7 +171,7 @@
             <div class="content flex-col">
                 <p><strong>Nicolas</strong></p>
                 <p><em></em></p>
-                <p>咦....(つェ⊂) 这是哪里？→_→ &nbsp;&nbsp;<a href="http://lidg.vip/tags/All/" style="padding:5px 4px;border-radius:4px;background:skyblue;color:#fff;">点我</a></p>
+                <p>咦....(つェ⊂) 这是哪里？→_→ &nbsp;&nbsp;<a href="http://lidg.vip/tags/All/" style="padding:8px;border-radius:6px;background:skyblue;color:#fff;font-size:16px">点我</a></p>
             </div>
 
             
@@ -238,15 +238,25 @@
 
 
 
+
+
+
 <section class="comments" id="comments">
-    <!-- UY BEGIN -->
-    <div id="uyan_frame"></div>
-    <script src="http://v2.uyan.cc/code/uyan.js?uid=2135369"></script>
-    <!-- UY END -->
+    <div id="gitment_thread"></div>
+    <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
+    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            owner: 'NicolasGui',
+            repo: 'http://github.com/NicolasGui/NicolasGui.github.io.git',
+            oauth: {
+                client_id: 'dc18d0455ac0fffd043f',
+                client_secret: '14ee6c131d0dfb890501a76b8a52ddf11242a0ed',
+            },
+        })
+        gitment.render('comments')
+    </script>
 </section>
-
-
-
 
 
 
@@ -260,7 +270,7 @@
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
-        谢谢大爷~
+        不信你敢扫 →_→
         <i class="icon icon-quote-right"></i>
     </h3>
     <div class="reward-content">
