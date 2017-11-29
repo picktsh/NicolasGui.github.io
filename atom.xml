@@ -42,11 +42,11 @@
       <category term="Github" scheme="http://NicolasGui.github.io/categories/All/Hexo/Github/"/>
     
     
-      <category term="All" scheme="http://NicolasGui.github.io/tags/All/"/>
-    
       <category term="Hexo" scheme="http://NicolasGui.github.io/tags/Hexo/"/>
     
       <category term="Github" scheme="http://NicolasGui.github.io/tags/Github/"/>
+    
+      <category term="All" scheme="http://NicolasGui.github.io/tags/All/"/>
     
   </entry>
   
@@ -75,11 +75,11 @@
       <category term="服务器" scheme="http://NicolasGui.github.io/categories/All/mac/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
-      <category term="All" scheme="http://NicolasGui.github.io/tags/All/"/>
-    
       <category term="mac" scheme="http://NicolasGui.github.io/tags/mac/"/>
     
       <category term="服务器" scheme="http://NicolasGui.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="All" scheme="http://NicolasGui.github.io/tags/All/"/>
     
   </entry>
   
@@ -108,13 +108,13 @@
       <category term="web前端" scheme="http://NicolasGui.github.io/categories/All/vue/web%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="All" scheme="http://NicolasGui.github.io/tags/All/"/>
-    
       <category term="vue" scheme="http://NicolasGui.github.io/tags/vue/"/>
     
       <category term="web前端" scheme="http://NicolasGui.github.io/tags/web%E5%89%8D%E7%AB%AF/"/>
     
       <category term="路由" scheme="http://NicolasGui.github.io/tags/%E8%B7%AF%E7%94%B1/"/>
+    
+      <category term="All" scheme="http://NicolasGui.github.io/tags/All/"/>
     
   </entry>
   
