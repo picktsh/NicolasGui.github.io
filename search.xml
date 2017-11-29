@@ -66,8 +66,6 @@
             
             <category> Hexo </category>
             
-            <category> Github </category>
-            
         </categories>
         
         
@@ -122,8 +120,6 @@
             
             <category> All </category>
             
-            <category> 工具 </category>
-            
             <category> 软件 </category>
             
         </categories>
@@ -133,7 +129,7 @@
             
             <tag> All </tag>
             
-            <tag> 工具 </tag>
+            <tag> web前端 </tag>
             
             <tag> 软件 </tag>
             
@@ -161,8 +157,6 @@
             <category> All </category>
             
             <category> mac </category>
-            
-            <category> 服务器 </category>
             
         </categories>
         
@@ -196,8 +190,6 @@
             <category> All </category>
             
             <category> vue </category>
-            
-            <category> web前端 </category>
             
         </categories>
         
