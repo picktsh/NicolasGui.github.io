@@ -1,68 +1,202 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
+<!DOCTYPE html>
+<html>
+<head>
     
-    <entry>
-      <title><![CDATA[web前端面试题之vue]]></title>
-      <url>/2017/12/18/web%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B9%8Bvue/</url>
-      <content type="html"><![CDATA[<h3 id="请说下具体使用vue的理解？"><a href="#请说下具体使用vue的理解？" class="headerlink" title="请说下具体使用vue的理解？"></a>请说下具体使用vue的理解？</h3><p>答：<br>    1、使用vue不必担心布局更改和类名重复导致的js重写，因为它是靠数据驱动双向绑定，底层是通过Object.defineProperty() 定义的数据 set、get 函数原理实现。<br>    2、组件化开发，让项目的可拓展性、移植性更好，代码重用性更高，就好像农民工建房子，拿起自己的工具包就可以开工。项目经理坐等收楼就好。<br>    3、单页应用的体验零距离接触安卓原生应用，局部组件更新界面，让用户体验更快速省时。<br>    4、js的代码无形的规范，团队合作开发代码可阅读性更高</p>
-<h3 id="你觉得哪些项目适合vue框架？"><a href="#你觉得哪些项目适合vue框架？" class="headerlink" title="你觉得哪些项目适合vue框架？"></a>你觉得哪些项目适合vue框架？</h3><p>答：<br>    1、数据信息量比较多的，反之类似企业网站就无需此框架了。<br>    2、手机web和app应用多端共用一套界面的项目，因为使用vue.cli+webpack后的前端目录，非常有利于项目的跨平台部署。</p>
-<h3 id="怎么理解MVVM模式的这些框架？"><a href="#怎么理解MVVM模式的这些框架？" class="headerlink" title="怎么理解MVVM模式的这些框架？"></a>怎么理解MVVM模式的这些框架？</h3><p>答：<br>    1、M就是Model模型层，存的一个数据对象。<br>    2、V就是View视图层，所有的html节点在这一层。<br>    3、VM就是ViewModel，它通过data属性连接Model模型层，通过el属性连接View视图层。</p>
-<h3 id="PC端项目你会在哪些场景使用Vue框架？"><a href="#PC端项目你会在哪些场景使用Vue框架？" class="headerlink" title="PC端项目你会在哪些场景使用Vue框架？"></a>PC端项目你会在哪些场景使用Vue框架？</h3><p>答：上万级数据需要瀑布流更新和搜索的时候，因为数据庞大的时候，用原生的dom操作js和html都会有列表的html布局，迭代很困难。再一个dom节点的大面积添加会影响性能。<br>    那么vue为什么解决这些问题呢？<br>        第一：只需用v-for在view层一个地方遍历数据即可，无需复制一段html代码在js和html两个地方。<br>        第二：vue通过Virtual Dom就是在js中模拟DOM对象树来优化DOM操作。</p>
-<h3 id="active-class是哪个组件的属性？嵌套路由怎么定义？"><a href="#active-class是哪个组件的属性？嵌套路由怎么定义？" class="headerlink" title="active-class是哪个组件的属性？嵌套路由怎么定义？"></a>active-class是哪个组件的属性？嵌套路由怎么定义？</h3><pre><code>vue-router模块的router-link组件。
-</code></pre><h3 id="怎么定义vue-router的动态路由？怎么获取传过来的动态参数？"><a href="#怎么定义vue-router的动态路由？怎么获取传过来的动态参数？" class="headerlink" title="怎么定义vue-router的动态路由？怎么获取传过来的动态参数？"></a>怎么定义vue-router的动态路由？怎么获取传过来的动态参数？</h3><p>答：在router目录下的index.js文件中，对path属性加上/:id。  使用router对象的params.id</p>
-<h3 id="vue-router有哪几种导航钩子"><a href="#vue-router有哪几种导航钩子" class="headerlink" title="vue-router有哪几种导航钩子"></a>vue-router有哪几种导航钩子</h3><pre><code>三种，一种是全局导航钩子：router.beforeEach(to,from,next)，作用：跳转前进行判断拦截。第二种：组件内的钩子；第三种：单独路由独享组件
-</code></pre><h3 id="scss是什么？安装使用的步骤是？有哪几大特性？"><a href="#scss是什么？安装使用的步骤是？有哪几大特性？" class="headerlink" title="scss是什么？安装使用的步骤是？有哪几大特性？"></a>scss是什么？安装使用的步骤是？有哪几大特性？</h3><pre><code>预处理css，把css当前函数编写，定义变量,嵌套。 先装css-loader、node-loader、sass-loader等加载器模块，在webpack-base.config.js配置文件中加多一个拓展:extenstion，再加多一个模块：module里面test、loader
-css的预编译。
-</code></pre><p>使用步骤：<br>第一步：用npm 下三个loader（sass-loader、css-loader、node-sass）<br>第二步：在build目录找到webpack.base.config.js，在那个extends属性中加一个拓展.scss<br>第三步：还是在同一个文件，配置一个module属性<br>第四步：然后在组件的style标签加上lang属性 ，例如：lang=”scss”<br>有哪几大特性:<br>1、可以用变量，例如（$变量名称=值）；<br>2、可以用混合器，例如（）<br>3、可以嵌套</p>
-<h3 id="mint-ui是什么？怎么使用？说出至少三个组件使用方法？"><a href="#mint-ui是什么？怎么使用？说出至少三个组件使用方法？" class="headerlink" title="mint-ui是什么？怎么使用？说出至少三个组件使用方法？"></a>mint-ui是什么？怎么使用？说出至少三个组件使用方法？</h3><p>基于vue的前端组件库。npm安装，然后import样式和js，vue.use（mintUi）全局引入。在单个组件局部引入：import {Toast} from ‘mint-ui’。组件一：Toast(‘登录成功’)；组件二：mint-header；组件三：mint-swiper</p>
-<h3 id="v-model是什么？怎么使用？-vue中标签怎么绑定事件？"><a href="#v-model是什么？怎么使用？-vue中标签怎么绑定事件？" class="headerlink" title="v-model是什么？怎么使用？ vue中标签怎么绑定事件？"></a>v-model是什么？怎么使用？ vue中标签怎么绑定事件？</h3><p>答：可以实现双向绑定，指令（v-class、v-for、v-if、v-show、v-on）。vue的model层的data属性。绑定事件：<input @click="doLog()"></p>
-<h3 id="axios是什么？怎么使用？描述使用它实现登录功能的流程？"><a href="#axios是什么？怎么使用？描述使用它实现登录功能的流程？" class="headerlink" title="axios是什么？怎么使用？描述使用它实现登录功能的流程？"></a>axios是什么？怎么使用？描述使用它实现登录功能的流程？</h3><p>答：请求后台资源的模块。npm install axios -S装好，然后发送的是跨域，需在配置文件中config/index.js进行设置。后台如果是Tp5则定义一个资源路由。js中使用import进来，然后.get或.post。返回在.then函数中如果成功，失败则是在.catch函数中</p>
-<h3 id="axios-tp5进阶中，调用axios-post-‘api-user’-是进行的什么操作？"><a href="#axios-tp5进阶中，调用axios-post-‘api-user’-是进行的什么操作？" class="headerlink" title="axios+tp5进阶中，调用axios.post(‘api/user’)是进行的什么操作？"></a>axios+tp5进阶中，调用axios.post(‘api/user’)是进行的什么操作？</h3><p>axios.put(‘api/user/8′)呢？<br>跨域，添加用户操作，更新操作。</p>
-<h3 id="什么是RESTful-API？怎么使用"><a href="#什么是RESTful-API？怎么使用" class="headerlink" title="什么是RESTful API？怎么使用?"></a>什么是RESTful API？怎么使用?</h3><p>答：是一个api的标准，无状态请求。请求的路由地址是固定的，如果是tp5则先路由配置中把资源路由配置好。标准有：.post .put .delete</p>
-<h3 id="vuex是什么？怎么使用？哪种功能场景使用它？"><a href="#vuex是什么？怎么使用？哪种功能场景使用它？" class="headerlink" title="vuex是什么？怎么使用？哪种功能场景使用它？"></a>vuex是什么？怎么使用？哪种功能场景使用它？</h3><p>答：vue框架中状态管理。在main.js引入store，注入。新建了一个目录store，….. export 。场景有：单页应用中，组件之间的状态。音乐播放、登录状态、加入购物车</p>
-<h3 id="mvvm框架是什么？它和其它框架（jquery）的区别是什么？哪些场景适合？"><a href="#mvvm框架是什么？它和其它框架（jquery）的区别是什么？哪些场景适合？" class="headerlink" title="mvvm框架是什么？它和其它框架（jquery）的区别是什么？哪些场景适合？"></a>mvvm框架是什么？它和其它框架（jquery）的区别是什么？哪些场景适合？</h3><p>答：一个model+view+viewModel框架，数据模型model，viewModel连接两个<br>区别：vue数据驱动，通过数据来显示视图层而不是节点操作。<br>场景：数据操作比较多的场景，更加便捷</p>
-<h3 id="自定义指令（v-check、v-focus）的方法有哪些？它有哪些钩子函数？还有哪些钩子函数参数？"><a href="#自定义指令（v-check、v-focus）的方法有哪些？它有哪些钩子函数？还有哪些钩子函数参数？" class="headerlink" title="自定义指令（v-check、v-focus）的方法有哪些？它有哪些钩子函数？还有哪些钩子函数参数？"></a>自定义指令（v-check、v-focus）的方法有哪些？它有哪些钩子函数？还有哪些钩子函数参数？</h3><p>答：全局定义指令：在vue对象的directive方法里面有两个参数，一个是指令名称，另外一个是函数。组件内定义指令：directives<br>钩子函数：bind（绑定事件触发）、inserted(节点插入的时候触发)、update（组件内相关更新）<br>钩子函数参数：el、binding</p>
-<h3 id="说出至少4种vue当中的指令和它的用法？"><a href="#说出至少4种vue当中的指令和它的用法？" class="headerlink" title="说出至少4种vue当中的指令和它的用法？"></a>说出至少4种vue当中的指令和它的用法？</h3><p>答：v-if：判断是否隐藏；v-for：数据循环出来；v-bind:class：绑定一个属性；v-model：实现双向绑定</p>
-<h3 id="vue-router是什么？它有哪些组件？"><a href="#vue-router是什么？它有哪些组件？" class="headerlink" title="vue-router是什么？它有哪些组件？"></a>vue-router是什么？它有哪些组件？</h3><p>答：vue用来写路由一个插件。router-link、router-view</p>
-<h3 id="导航钩子有哪些？它们有哪些参数？"><a href="#导航钩子有哪些？它们有哪些参数？" class="headerlink" title="导航钩子有哪些？它们有哪些参数？"></a>导航钩子有哪些？它们有哪些参数？</h3><p>答：导航钩子有：a/全局钩子和组件内独享的钩子。b/beforeRouteEnter、afterEnter、beforeRouterUpdate、beforeRouteLeave<br>参数：有to（去的那个路由）、from（离开的路由）、next（一定要用这个函数才能去到下一个路由，如果不用就拦截）最常用就这几种</p>
-<h3 id="Vue的双向数据绑定原理是什么？或者问（vue-data是怎么实现的？）"><a href="#Vue的双向数据绑定原理是什么？或者问（vue-data是怎么实现的？）" class="headerlink" title="Vue的双向数据绑定原理是什么？或者问（vue data是怎么实现的？）"></a>Vue的双向数据绑定原理是什么？或者问（vue data是怎么实现的？）</h3><p>答：vue.js 是采用数据劫持结合发布者-订阅者模式的方式，通过Object.defineProperty()来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。<br>具体步骤：<br>第一步：需要observe的数据对象进行递归遍历，包括子属性对象的属性，都加上 setter和getter<br>这样的话，给这个对象的某个值赋值，就会触发setter，那么就能监听到了数据变化<br>第二步：compile解析模板指令，将模板中的变量替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，更新视图<br>第三步：Watcher订阅者是Observer和Compile之间通信的桥梁，主要做的事情是:<br>1、在自身实例化时往属性订阅器(dep)里面添加自己<br>2、自身必须有一个update()方法<br>3、待属性变动dep.notice()通知时，能调用自身的update()方法，并触发Compile中绑定的回调，则功成身退。<br>第四步：MVVM作为数据绑定的入口，整合Observer、Compile和Watcher三者，通过Observer来监听自己的model数据变化，通过Compile来解析编译模板指令，最终利用Watcher搭起Observer和Compile之间的通信桥梁，达到数据变化 -&gt; 视图更新；视图交互变化(input) -&gt; 数据model变更的双向绑定效果。</p>
-<h3 id="请详细说下你对vue生命周期的理解？"><a href="#请详细说下你对vue生命周期的理解？" class="headerlink" title="请详细说下你对vue生命周期的理解？"></a>请详细说下你对vue生命周期的理解？</h3><p>：总共分为8个阶段创建前/后，载入前/后，更新前/后，销毁前/后。<br>创建前/后： 在beforeCreated阶段，vue实例的挂载元素$el和数据对象data都为undefined，还未初始化。在created阶段，vue实例的数据对象data有了，$el还没有。<br>载入前/后：在beforeMount阶段，vue实例的$el和data都初始化了，但还是挂载之前为虚拟的dom节点，data.message还未替换。在mounted阶段，vue实例挂载完成，data.message成功渲染。<br>更新前/后：当data变化时，会触发beforeUpdate和updated方法。<br>销毁前/后：在执行destroy方法后，对data的改变不会再触发周期函数，说明此时vue实例已经解除了事件监听以及和dom的绑定，但是dom结构依然存在</p>
-<h3 id="请说下封装-vue-组件的过程？"><a href="#请说下封装-vue-组件的过程？" class="headerlink" title="请说下封装 vue 组件的过程？"></a>请说下封装 vue 组件的过程？</h3><p>答：首先，组件可以提升整个项目的开发效率。能够把页面抽象成多个相对独立的模块，解决了我们传统项目开发：效率低、难维护、复用性等问题。<br>然后，使用Vue.extend方法创建一个组件，然后使用Vue.component方法注册组件。子组件需要数据，可以在props中接受定义。而子组件修改好数据后，想把数据传递给父组件。可以采用emit方法。</p>
-<h3 id="你是怎么认识vuex的？"><a href="#你是怎么认识vuex的？" class="headerlink" title="你是怎么认识vuex的？"></a>你是怎么认识vuex的？</h3><p>答：vuex可以理解为一种开发模式或框架。比如PHP有thinkphp，java有spring等。<br>通过状态（数据源）集中管理驱动组件的变化（好比spring的IOC容器对bean进行集中管理）。<br>应用级的状态集中放在store中； 改变状态的方式是提交mutations，这是个同步的事物； 异步逻辑应该封装在action中。</p>
-<h3 id="vue-loader是什么？使用它的用途有哪些？"><a href="#vue-loader是什么？使用它的用途有哪些？" class="headerlink" title="vue-loader是什么？使用它的用途有哪些？"></a>vue-loader是什么？使用它的用途有哪些？</h3><p>答：解析.vue文件的一个加载器，跟template/js/style转换成js模块。<br>用途：js可以写es6、style样式可以scss或less、template可以加jade等</p>
-<h3 id="请说出vue-cli项目中src目录每个文件夹和文件的用法？"><a href="#请说出vue-cli项目中src目录每个文件夹和文件的用法？" class="headerlink" title="请说出vue.cli项目中src目录每个文件夹和文件的用法？"></a>请说出vue.cli项目中src目录每个文件夹和文件的用法？</h3><p>答：assets文件夹是放静态资源；components是放组件；router是定义路由相关的配置;view视图；app.vue是一个应用主组件；main.js是入口文件</p>
-<h3 id="vue-cli中怎样使用自定义的组件？有遇到过哪些问题吗？"><a href="#vue-cli中怎样使用自定义的组件？有遇到过哪些问题吗？" class="headerlink" title="vue.cli中怎样使用自定义的组件？有遇到过哪些问题吗？"></a>vue.cli中怎样使用自定义的组件？有遇到过哪些问题吗？</h3><p>答：第一步：在components目录新建你的组件文件（smithButton.vue），script一定要export default {<br>第二步：在需要用的页面（组件）中导入：import smithButton from ‘../components/smithButton.vue’<br>第三步：注入到vue的子组件的components属性上面,components:{smithButton}<br>第四步：在template视图view中使用，<smith-button>  </smith-button><br>问题有：smithButton命名，使用的时候则smith-button。</p>
-<h3 id="聊聊你对Vue-js的template编译的理解？"><a href="#聊聊你对Vue-js的template编译的理解？" class="headerlink" title="聊聊你对Vue.js的template编译的理解？"></a>聊聊你对Vue.js的template编译的理解？</h3><p>答：简而言之，就是先转化成AST树，再得到的render函数返回VNode（Vue的虚拟DOM节点）<br>详情步骤：<br>首先，通过compile编译器把template编译成AST语法树（abstract syntax tree 即 源代码的抽象语法结构的树状表现形式），compile是createCompiler的返回值，createCompiler是用以创建编译器的。另外compile还负责合并option。<br>然后，AST会经过generate（将AST语法树转化成render funtion字符串的过程）得到render函数，render的返回值是VNode，VNode是Vue的虚拟DOM节点，里面有（标签名、子节点、文本等等）</p>
-<h3 id="vue响应式原理？"><a href="#vue响应式原理？" class="headerlink" title="vue响应式原理？"></a>vue响应式原理？</h3><h3 id="vue-router实现原理？"><a href="#vue-router实现原理？" class="headerlink" title="vue-router实现原理？"></a>vue-router实现原理？</h3><h3 id="为什么要选vue？与其它框架对比的优势和劣势？"><a href="#为什么要选vue？与其它框架对比的优势和劣势？" class="headerlink" title="为什么要选vue？与其它框架对比的优势和劣势？"></a>为什么要选vue？与其它框架对比的优势和劣势？</h3><h3 id="vuejs与angularjs以及react的区别？"><a href="#vuejs与angularjs以及react的区别？" class="headerlink" title="vuejs与angularjs以及react的区别？"></a>vuejs与angularjs以及react的区别？</h3><h3 id="vuex是用来做什么的？"><a href="#vuex是用来做什么的？" class="headerlink" title="vuex是用来做什么的？"></a>vuex是用来做什么的？</h3>]]></content>
-      
-        <categories>
-            
-            <category> All </category>
-            
-            <category> tools </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> All </tag>
-            
-            <tag> vue </tag>
-            
-            <tag> web前端 </tag>
-            
-            <tag> 面试 </tag>
-            
-        </tags>
-        
-    </entry>
+
     
-    <entry>
-      <title><![CDATA[web前端面试题-2017]]></title>
-      <url>/2017/12/18/web%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/</url>
-      <content type="html"><![CDATA[<h2 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h2><h3 id="一个优秀的前端开发人员需要具备哪些特质？"><a href="#一个优秀的前端开发人员需要具备哪些特质？" class="headerlink" title="一个优秀的前端开发人员需要具备哪些特质？"></a>一个优秀的前端开发人员需要具备哪些特质？</h3><p>学习能力、代码可维护性、代码规范性、解决问题的能力、沟通能力</p>
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?079c9cb6195202d8c3b3b1c821dc1486"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>web前端面试题-2017 | Don&#39;t BB,show me the code!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="skyblue">
+    
+    
+    <meta name="keywords" content="All,web前端,面试">
+    <meta name="description" content="基础部分一个优秀的前端开发人员需要具备哪些特质？学习能力、代码可维护性、代码规范性、解决问题的能力、沟通能力 常见的布局方式有哪些？table布局、流式布局、弹性布局、响应式布局 css预加载的使用？less、sacc 常见的解决浏览器兼容性问题的方式有哪些？html5有哪些新特性及其使用场合？如何解决兼容性问题介绍一下标准的css的盒子模型？如何居中div，如何居中一个浮动元素？如何让绝对定位的">
+<meta name="keywords" content="All,web前端,面试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web前端面试题-2017">
+<meta property="og:url" content="http://NicolasGui.github.io/2017/12/18/web前端面试题/index.html">
+<meta property="og:site_name" content="Don&#39;t BB,show me the code!">
+<meta property="og:description" content="基础部分一个优秀的前端开发人员需要具备哪些特质？学习能力、代码可维护性、代码规范性、解决问题的能力、沟通能力 常见的布局方式有哪些？table布局、流式布局、弹性布局、响应式布局 css预加载的使用？less、sacc 常见的解决浏览器兼容性问题的方式有哪些？html5有哪些新特性及其使用场合？如何解决兼容性问题介绍一下标准的css的盒子模型？如何居中div，如何居中一个浮动元素？如何让绝对定位的">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-18T10:49:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="web前端面试题-2017">
+<meta name="twitter:description" content="基础部分一个优秀的前端开发人员需要具备哪些特质？学习能力、代码可维护性、代码规范性、解决问题的能力、沟通能力 常见的布局方式有哪些？table布局、流式布局、弹性布局、响应式布局 css预加载的使用？less、sacc 常见的解决浏览器兼容性问题的方式有哪些？html5有哪些新特性及其使用场合？如何解决兼容性问题介绍一下标准的css的盒子模型？如何居中div，如何居中一个浮动元素？如何让绝对定位的">
+    
+        <link rel="alternate" type="application/atom+xml" title="Don&#39;t BB,show me the code!" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/banner.gif)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/logo.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Nicolas</h5>
+          <a href="mailto:345930282@qq.com" title="345930282@qq.com" class="mail">345930282@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/All"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/NicolasGui" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/512567097" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                About
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">web前端面试题-2017</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">web前端面试题-2017</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-12-18T07:02:29.000Z" itemprop="datePublished" class="page-time">
+  2017-12-18
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/All/">All</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/All/面试/">面试</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基础部分"><span class="post-toc-number">1.</span> <span class="post-toc-text">基础部分</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一个优秀的前端开发人员需要具备哪些特质？"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">一个优秀的前端开发人员需要具备哪些特质？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常见的布局方式有哪些？"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">常见的布局方式有哪些？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css预加载的使用？"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">css预加载的使用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常见的解决浏览器兼容性问题的方式有哪些？"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">常见的解决浏览器兼容性问题的方式有哪些？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#html5有哪些新特性及其使用场合？如何解决兼容性问题"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">html5有哪些新特性及其使用场合？如何解决兼容性问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍一下标准的css的盒子模型？"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">介绍一下标准的css的盒子模型？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何居中div，如何居中一个浮动元素？如何让绝对定位的div居中？"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">如何居中div，如何居中一个浮动元素？如何让绝对定位的div居中？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#display设置为inline-block时，li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">display设置为inline-block时，li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#请解释下为什么会出现浮动和什么时候需要清除浮动？清除浮动的方式？"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">请解释下为什么会出现浮动和什么时候需要清除浮动？清除浮动的方式？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#margin和padding分别适合什么场景使用？"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">margin和padding分别适合什么场景使用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是响应式设计？响应式设计的基本原理是什么？如何兼容较低版本的IE？"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">什么是响应式设计？响应式设计的基本原理是什么？如何兼容较低版本的IE？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#有一个高度自适应的div。里面有2个div，一个高度100px，希望另一个填满剩下的高度？"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">有一个高度自适应的div。里面有2个div，一个高度100px，希望另一个填满剩下的高度？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#let、const、var的区别？"><span class="post-toc-number">1.13.</span> <span class="post-toc-text">let、const、var的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nll和undefined的区别？"><span class="post-toc-number">1.14.</span> <span class="post-toc-text">nll和undefined的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是闭包（closure）？为什么要用它？使用举例"><span class="post-toc-number">1.15.</span> <span class="post-toc-text">什么是闭包（closure）？为什么要用它？使用举例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#js代码中“use-strict”是什么意思？使用它区别是什么？"><span class="post-toc-number">1.16.</span> <span class="post-toc-text">js代码中“use strict”是什么意思？使用它区别是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#js中有一个函数，执行对象查找时，永远不会去查找原型，这个函数是什么？"><span class="post-toc-number">1.17.</span> <span class="post-toc-text">js中有一个函数，执行对象查找时，永远不会去查找原型，这个函数是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#js延迟加在的方式有哪些？"><span class="post-toc-number">1.18.</span> <span class="post-toc-text">js延迟加在的方式有哪些？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#同步和异步的区别？"><span class="post-toc-number">1.19.</span> <span class="post-toc-text">同步和异步的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#document-write和innerHTNML的区别？"><span class="post-toc-number">1.20.</span> <span class="post-toc-text">document.write和innerHTNML的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对promise的理解"><span class="post-toc-number">1.21.</span> <span class="post-toc-text">对promise的理解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#引起内存泄漏的原因；"><span class="post-toc-number">1.22.</span> <span class="post-toc-text">引起内存泄漏的原因；</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#谈谈你对this的理解-this的使用场景、this绑定、this丢失"><span class="post-toc-number">1.23.</span> <span class="post-toc-text">谈谈你对this的理解  this的使用场景、this绑定、this丢失</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#js的数据类型都有哪些？"><span class="post-toc-number">1.24.</span> <span class="post-toc-text">js的数据类型都有哪些？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是Ajax，优缺点？使用场合？"><span class="post-toc-number">1.25.</span> <span class="post-toc-text">什么是Ajax，优缺点？使用场合？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何解析JSON？-至少3种办法，面试必问"><span class="post-toc-number">1.26.</span> <span class="post-toc-text">如何解析JSON？(至少3种办法，面试必问)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#js的typeof返回哪些数据类型？"><span class="post-toc-number">1.27.</span> <span class="post-toc-text">js的typeof返回哪些数据类型？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#split-join-的区别？"><span class="post-toc-number">1.28.</span> <span class="post-toc-text">split()  join()的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组方法pop-push-unshift-shift"><span class="post-toc-number">1.29.</span> <span class="post-toc-text">数组方法pop() push() unshift() shift()?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ES6的了解？"><span class="post-toc-number">1.30.</span> <span class="post-toc-text">ES6的了解？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#js的本地对象，内置对象和宿主对象？"><span class="post-toc-number">1.31.</span> <span class="post-toc-text">js的本地对象，内置对象和宿主对象？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#列举所了解的前端框架并简述？"><span class="post-toc-number">1.32.</span> <span class="post-toc-text">列举所了解的前端框架并简述？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#你如何对网站的文件和资源进行优化？期待的解决方法包括？"><span class="post-toc-number">1.33.</span> <span class="post-toc-text">你如何对网站的文件和资源进行优化？期待的解决方法包括？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#js线程与进程的区别？"><span class="post-toc-number">1.34.</span> <span class="post-toc-text">js线程与进程的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#请解释一下什么是“语义化的-HTML”？"><span class="post-toc-number">1.35.</span> <span class="post-toc-text">请解释一下什么是“语义化的 HTML”？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么利用多个域名来提供网站资源会更有效？"><span class="post-toc-number">1.36.</span> <span class="post-toc-text">为什么利用多个域名来提供网站资源会更有效？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如果你参与到一个项目中，发现他们使用-Tab-来缩进代码，但是你喜欢空格，你会怎么做"><span class="post-toc-number">1.37.</span> <span class="post-toc-text">如果你参与到一个项目中，发现他们使用 Tab 来缩进代码，但是你喜欢空格，你会怎么做</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#data-属性的作用是什么？"><span class="post-toc-number">1.38.</span> <span class="post-toc-text">data-属性的作用是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#请描述一下-cookies，sessionStorage-和-localStorage-的区别？"><span class="post-toc-number">1.39.</span> <span class="post-toc-text">请描述一下 cookies，sessionStorage 和 localStorage 的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#描述下-“reset”-CSS-文件的作用和使用它的好处。"><span class="post-toc-number">1.40.</span> <span class="post-toc-text">描述下 “reset” CSS 文件的作用和使用它的好处。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何视觉隐藏网页内容，只让它们在屏幕阅读器中可用？"><span class="post-toc-number">1.41.</span> <span class="post-toc-text">如何视觉隐藏网页内容，只让它们在屏幕阅读器中可用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解释下事件代理？"><span class="post-toc-number">1.42.</span> <span class="post-toc-text">解释下事件代理？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解释下原型继承的原理？"><span class="post-toc-number">1.43.</span> <span class="post-toc-text">解释下原型继承的原理？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实操部分"><span class="post-toc-number">2.</span> <span class="post-toc-text">实操部分</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用原型链的方式给Array对象添加一个数组去重的方法？"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">用原型链的方式给Array对象添加一个数组去重的方法？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#定义一个方法，对所有传入的数字参数的第三位小数进行四舍五入，使得返回值保留两位小数，不够的补0"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">定义一个方法，对所有传入的数字参数的第三位小数进行四舍五入，使得返回值保留两位小数，不够的补0</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#定义一个方法，实现阶乘"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">定义一个方法，实现阶乘</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#定义一段代码，页面载入完成1分钟后非缓存模式刷新当前页面"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">定义一段代码，页面载入完成1分钟后非缓存模式刷新当前页面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#把Object的实例化对象A、B、C合并-赋值给对象C"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">把Object的实例化对象A、B、C合并 赋值给对象C</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#写一个function-清楚字符串前后的空格（兼容所有浏览器）"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">写一个function 清楚字符串前后的空格（兼容所有浏览器）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#获取指定范围内N个不重复的随机数"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">获取指定范围内N个不重复的随机数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对事件的理解，如何阻止事件默认行为和事件冒泡？"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">对事件的理解，如何阻止事件默认行为和事件冒泡？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进阶部分"><span class="post-toc-number">3.</span> <span class="post-toc-text">进阶部分</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#interval和setInterval区别？"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">$interval和setInterval区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用过ng-service和ng-factory吗？请简单描述。"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">用过ng-service和ng-factory吗？请简单描述。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Factory-就是创建一个对象，为它添加属性，然后把这个对象返回出来。你把-service-传进-controller-之后，在-controller-里这个对象里的属性就可以通过-factory-使用了。"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Factory 就是创建一个对象，为它添加属性，然后把这个对象返回出来。你把 service 传进 controller 之后，在 controller 里这个对象里的属性就可以通过 factory 使用了。</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Web前端优化面试要点（面试必问）"><span class="post-toc-number">4.</span> <span class="post-toc-text">Web前端优化面试要点（面试必问）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何解决跨域问题？原理？"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">如何解决跨域问题？原理？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CORS"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">CORS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XML和JSON的区别？"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">XML和JSON的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Ajax是什么？Ajax常用的技术列举几个？Ajax的缺点有什么？"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">Ajax是什么？Ajax常用的技术列举几个？Ajax的缺点有什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对前端模块化的认识"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">对前端模块化的认识</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Javascript垃圾回收方法"><span class="post-toc-number">4.6.</span> <span class="post-toc-text">Javascript垃圾回收方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#栈和队列的区别"><span class="post-toc-number">4.7.</span> <span class="post-toc-text">栈和队列的区别?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#当一个元素被ng-if从DOM中移除，同它关联的作用域也会被销毁。而且当它重新加入DOM中时，会通过原型继承从它的父作用域生成一个新的作用域。也就是说ng-if会新建作用域，而ng-show和ng-hide则不会。"><span class="post-toc-number">4.8.</span> <span class="post-toc-text">当一个元素被ng-if从DOM中移除，同它关联的作用域也会被销毁。而且当它重新加入DOM中时，会通过原型继承从它的父作用域生成一个新的作用域。也就是说ng-if会新建作用域，而ng-show和ng-hide则不会。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#谈谈你对webpack的看法"><span class="post-toc-number">4.9.</span> <span class="post-toc-text">谈谈你对webpack的看法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP和HTTPS"><span class="post-toc-number">4.10.</span> <span class="post-toc-text">HTTP和HTTPS</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常见web安全及防护原理"><span class="post-toc-number">5.</span> <span class="post-toc-text">常见web安全及防护原理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#javascript继承的6种方法"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">javascript继承的6种方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Node-js的适用场景？"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">Node.js的适用场景？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#new操作符具体干了什么呢"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">new操作符具体干了什么呢?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#针对-jQuery-的优化方法？"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">针对 jQuery 的优化方法？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何编写高性能的Javascript？"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">如何编写高性能的Javascript？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对Node的优点和缺点提出了自己的看法？"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">对Node的优点和缺点提出了自己的看法？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AJAX应用和传统Web应用有什么不同"><span class="post-toc-number">5.7.</span> <span class="post-toc-text">AJAX应用和传统Web应用有什么不同</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说一下什么是javascript的同源策略？"><span class="post-toc-number">5.8.</span> <span class="post-toc-text">说一下什么是javascript的同源策略？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说最近最流行的一些东西吧？常去哪些网站？"><span class="post-toc-number">5.9.</span> <span class="post-toc-text">说说最近最流行的一些东西吧？常去哪些网站？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#你遇到过比较难的技术问题是？你是如何解决的？"><span class="post-toc-number">5.10.</span> <span class="post-toc-text">你遇到过比较难的技术问题是？你是如何解决的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常使用的库有哪些？常用的前端开发工具？开发过什么应用或组件？"><span class="post-toc-number">5.11.</span> <span class="post-toc-text">常使用的库有哪些？常用的前端开发工具？开发过什么应用或组件？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面重构怎么操作？"><span class="post-toc-number">5.12.</span> <span class="post-toc-text">页面重构怎么操作？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#列举IE-与其他浏览器不一样的特性？"><span class="post-toc-number">5.13.</span> <span class="post-toc-text">列举IE 与其他浏览器不一样的特性？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#99-的网站都需要被重构是那本书上写的？"><span class="post-toc-number">5.14.</span> <span class="post-toc-text">99%的网站都需要被重构是那本书上写的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么叫优雅降级和渐进增强？"><span class="post-toc-number">5.15.</span> <span class="post-toc-text">什么叫优雅降级和渐进增强？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#WEB应用从服务器主动推送Data到客户端有那些方式？"><span class="post-toc-number">5.16.</span> <span class="post-toc-text">WEB应用从服务器主动推送Data到客户端有那些方式？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#除了前端以外还了解什么其它技术么？你最最厉害的技能是什么？"><span class="post-toc-number">5.17.</span> <span class="post-toc-text">除了前端以外还了解什么其它技术么？你最最厉害的技能是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#你常用的开发工具是什么，为什么？"><span class="post-toc-number">5.18.</span> <span class="post-toc-text">你常用的开发工具是什么，为什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对前端界面工程师这个职位是怎么样理解的？它的前景会怎么样？"><span class="post-toc-number">5.19.</span> <span class="post-toc-text">对前端界面工程师这个职位是怎么样理解的？它的前景会怎么样？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端是最贴近用户的程序员，前端的能力就是能让产品从-90分进化到-100-分，甚至更好，"><span class="post-toc-number">5.20.</span> <span class="post-toc-text">前端是最贴近用户的程序员，前端的能力就是能让产品从 90分进化到 100 分，甚至更好，</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么异步加载JS文件？加载方式？"><span class="post-toc-number">5.21.</span> <span class="post-toc-text">为什么异步加载JS文件？加载方式？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#NG部分"><span class="post-toc-number">6.</span> <span class="post-toc-text">NG部分</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ng-repeat迭代数组的时候，如果数组中有相同值，会有什么问题，如何解决？"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">ng-repeat迭代数组的时候，如果数组中有相同值，会有什么问题，如何解决？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ng-click-中写的表达式，能使用-JS-原生对象上的方法吗？"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">ng-click 中写的表达式，能使用 JS 原生对象上的方法吗？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#angular-的数据绑定采用什么机制？详述原理"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">angular 的数据绑定采用什么机制？详述原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何看待angular2"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">如何看待angular2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是angular的广播与事件"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">什么是angular的广播与事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#详述-angular-的-“依赖注入”"><span class="post-toc-number">6.6.</span> <span class="post-toc-text">详述 angular 的 “依赖注入”</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#factory、service-和-provider-是什么关系？"><span class="post-toc-number">6.7.</span> <span class="post-toc-text">factory、service 和 provider 是什么关系？</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-web前端面试题"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">web前端面试题-2017</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-12-18 15:02:29" datetime="2017-12-18T07:02:29.000Z"  itemprop="datePublished">2017-12-18</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/All/">All</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/All/面试/">面试</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h2><h3 id="一个优秀的前端开发人员需要具备哪些特质？"><a href="#一个优秀的前端开发人员需要具备哪些特质？" class="headerlink" title="一个优秀的前端开发人员需要具备哪些特质？"></a>一个优秀的前端开发人员需要具备哪些特质？</h3><p>学习能力、代码可维护性、代码规范性、解决问题的能力、沟通能力</p>
 <h3 id="常见的布局方式有哪些？"><a href="#常见的布局方式有哪些？" class="headerlink" title="常见的布局方式有哪些？"></a>常见的布局方式有哪些？</h3><p>table布局、流式布局、弹性布局、响应式布局</p>
 <h3 id="css预加载的使用？"><a href="#css预加载的使用？" class="headerlink" title="css预加载的使用？"></a>css预加载的使用？</h3><p>less、sacc</p>
 <h3 id="常见的解决浏览器兼容性问题的方式有哪些？"><a href="#常见的解决浏览器兼容性问题的方式有哪些？" class="headerlink" title="常见的解决浏览器兼容性问题的方式有哪些？"></a>常见的解决浏览器兼容性问题的方式有哪些？</h3><h3 id="html5有哪些新特性及其使用场合？如何解决兼容性问题"><a href="#html5有哪些新特性及其使用场合？如何解决兼容性问题" class="headerlink" title="html5有哪些新特性及其使用场合？如何解决兼容性问题"></a>html5有哪些新特性及其使用场合？如何解决兼容性问题</h3><h3 id="介绍一下标准的css的盒子模型？"><a href="#介绍一下标准的css的盒子模型？" class="headerlink" title="介绍一下标准的css的盒子模型？"></a>介绍一下标准的css的盒子模型？</h3><h3 id="如何居中div，如何居中一个浮动元素？如何让绝对定位的div居中？"><a href="#如何居中div，如何居中一个浮动元素？如何让绝对定位的div居中？" class="headerlink" title="如何居中div，如何居中一个浮动元素？如何让绝对定位的div居中？"></a>如何居中div，如何居中一个浮动元素？如何让绝对定位的div居中？</h3><pre><code>1、设置margin:0 auto;width:。。。
@@ -266,235 +400,305 @@ Firefox和Safari允许cookie多达4097个字节，包括名（name）、值（va
 </code></pre><p>可以将控制器之间的通信，分为三种情形：<br>    （1）.无直接关联的控制器：使用 $rootScope.$emit()、$rootScope.$boardcast() 或 $scope.$emit来发出数据，通过 $rootScope.$on() 来获取数据<br>    （2）.父控制器到子控制器：父控制器使用 $scope.$boradcast() 来发送数据，子控制器通过 $scope.$on() 来获取数据<br>（3）.子控制器至父控制器：子控制器使用 $scope.$emit() 来发送数据，父控制器通过 $scope.$on() 来获取数据<br>而且缺少足够多的第三方库支持。看起来，就像是Ruby/Rails当年的样子。</p>
 <h3 id="详述-angular-的-“依赖注入”"><a href="#详述-angular-的-“依赖注入”" class="headerlink" title="详述 angular 的 “依赖注入”"></a>详述 angular 的 “依赖注入”</h3><p>依赖注入是一种软件设计模式，目的是处理代码之间的依赖关系，减少组件间的耦合。AngularJS 是通过构造函数的参数名字来推断依赖服务名称的，通过 toString() 来找到这个定义的 function 对应的字符串，然后用正则解析出其中的参数（依赖项），再去依赖映射中取到对应的依赖，实例化之后传入6、ng-if 跟 ng-show/hide 的区别有哪些？<br>第一点区别是， ng-if 在后面表达式为 true 的时候才创建这个 dom 节点， ng-show 是初始时就创建了，用 display:block 和 display:none 来控制显示和不显示。<br>第二点区别是， ng-if 会（隐式地）产生新作用域， ng-switch 、 ng-include 等会动态创建一块界面的也是如此。</p>
 <h3 id="factory、service-和-provider-是什么关系？"><a href="#factory、service-和-provider-是什么关系？" class="headerlink" title="factory、service 和 provider 是什么关系？"></a>factory、service 和 provider 是什么关系？</h3><p>把 service 的方法和数据放在一个对象里，并返回这个对象；通过构造函数方式创建 service，返回一个实例化对象；创建一个可通过 config 配置的 service，$get 中返回的，就是用 factory 创建 service 的内容</p>
-]]></content>
-      
-        <categories>
-            
-            <category> All </category>
-            
-            <category> 面试 </category>
-            
-        </categories>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
         
+<span class="post-time">
+    最后更新时间：<time datetime="2017-12-18T10:49:40.000Z" itemprop="dateUpdated">2017-12-18 18:49:40</time>
+</span><br>
+
+
         
-        <tags>
-            
-            <tag> All </tag>
-            
-            <tag> web前端 </tag>
-            
-            <tag> 面试 </tag>
-            
-        </tags>
+        <br>如果您有好的建议或发现是么问题，欢迎访问个人<a href="https://github.com/NicolasGui" style="color:red;font-size:18px;font-weight:bold;">gitHub</a>发Issues 或 Pull requests，如果觉得还不错的话别忘了⭐   <a href="https://github.com/NicolasGui">to the project🤘</a>
         
-    </entry>
+    </div>
+    <footer>
+        <a href="http://NicolasGui.github.io">
+            <img src="/img/logo.png" alt="Nicolas">
+            Nicolas
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/All/">All</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web前端/">web前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
     
-    <entry>
-      <title><![CDATA[Hexo+Github搭建个人博客]]></title>
-      <url>/2017/10/26/Hexo+Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-      <content type="html"><![CDATA[<p>欢迎来到我的博客驿站，本站是使用Hexo+Github基于基于Node.js的静态博客框架, 官方文档请参考<a href="https://hexo.io" target="_blank" rel="external">Hexo</a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h3><h4 id="安装Node（基础环境）"><a href="#安装Node（基础环境）" class="headerlink" title="安装Node（基础环境）"></a>安装Node（基础环境）</h4><p><a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node官网</a>你可以根据不同平台系统选择你需要的Node.js安装包<br>注意：Linux上安装Node.js需要安装Python 2.6 或 2.7 ，不建议安装Python 3.0以上版本。</p>
-<h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><p>目的：把本地的hexo内容提交到github上去.首先去<a href="http://www.github.com" target="_blank" rel="external">GitHub</a>申请个人账号，以便后期用来做博客的远程创库、域名、服务器之类的，github账号不再啰嗦了,跟一般的注册账号差不多，方便起见，顺便配置SSH Keys</p>
-<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>开始之前，先切换NPM源， 解释一下，NPM是随同 NodeJS 一起安装的包管理工具，我们经常使用它来下载第三方包到本地。<br>但在使用 NPM 过程很多人估计都知道，在国内下载第三方包的速度极其之慢。因此推荐使用淘宝 NPM 镜像，它是一个完整 npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟 ，操作如下：<br>终端/CMD里面：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure></p>
-<p>如此一来就可以使用 cnpm 命令来安装模块了：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cnpm install xxxx</div></pre></td></tr></table></figure></p>
-<p>接下来开始安装Hexo，首先在你个人的workspace创建博客文件夹，如myblog<br>然后cd到myblog里安装Hexo：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cnpm install -g hexo-cli</div></pre></td></tr></table></figure></p>
-<p>接下来执行init命令初始化你的hexo：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure></p>
-<p>至此，安装工作顺利完成！myblog就是你以后写博客的目录，所有的操作都在里面进行。</p>
-<h3 id="生成博客"><a href="#生成博客" class="headerlink" title="生成博客"></a>生成博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div></pre></td></tr></table></figure>
-<h3 id="预览博客"><a href="#预览博客" class="headerlink" title="预览博客"></a>预览博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo s</div></pre></td></tr></table></figure>
-<p>接下来在浏览器地址栏输入：localhost:4000回车就可以预览你的博客了</p>
-<h3 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo d</div></pre></td></tr></table></figure>
-<h3 id="托管到gitHub"><a href="#托管到gitHub" class="headerlink" title="托管到gitHub"></a>托管到gitHub</h3><h4 id="创建repository"><a href="#创建repository" class="headerlink" title="创建repository"></a>创建repository</h4><p>创建一个与自己用户名同名的repository<br>在自己Github主页右下角，创建一个新的repository。比如我的Github账号是NicolasGui，那么我应该创建的repository名字应该是NicolasGui.github.io。</p>
-<h4 id="添加git配置"><a href="#添加git配置" class="headerlink" title="添加git配置"></a>添加git配置</h4><p>首先在主题的配置文件_config.yml里面添加<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: http://github.com/NicolasGui/NicolasGui.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
-<p>repository：就是你的gitHub同名仓库的地址</p>
-<h4 id="代码上传"><a href="#代码上传" class="headerlink" title="代码上传"></a>代码上传</h4><p>安装 hexo-deployer-git依赖包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
-<p>然后使用如下命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure>
-<p>此时你可以在浏览器地址栏输入 “用户名.github.io.git”来访问你的个人博客<br>(用户名：你gitHub的用户名)</p>
-<h3 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h3><h4 id="域名申请"><a href="#域名申请" class="headerlink" title="域名申请"></a>域名申请</h4><p>域名申请的途径非常多，建议使用<a href="http://www.aliyun.com" target="_blank" rel="external">阿里云</a>的，方便后期备案，在阿里云购买了域名之后，到域名管理中心进行域名解析，添加以下几条记录值：</p>
-<table>
-<thead>
-<tr>
-<th>记录类型</th>
-<th>主机记录</th>
-<th>解析线路(isp)</th>
-<th>记录值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CNAME</td>
-<td>www</td>
-<td>默认</td>
-<td>用户名.github.io</td>
-</tr>
-<tr>
-<td>A</td>
-<td>@</td>
-<td>默认</td>
-<td>192.30.252.153</td>
-</tr>
-<tr>
-<td>A</td>
-<td>@</td>
-<td>默认</td>
-<td>192.30.252.154</td>
-</tr>
-</tbody>
-</table>
-<p>接下来在public目录新建名为CNAME的文件，注意，没有后缀名<br>然后在CNAME文件里面填写你的域名，如：xxx.com   注意：不带www也不带http，只需要域名就好<br>接下来分别执行hexo g重新生成一下博客<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g</div></pre></td></tr></table></figure></p>
-<p>然后再上传到git<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo d</div></pre></td></tr></table></figure></p>
-<p>之后就可以使用域名访问你的个人博客了</p>
-]]></content>
-      
-        <categories>
-            
-            <category> All </category>
-            
-            <category> Hexo </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> All </tag>
-            
-            <tag> Hexo </tag>
-            
-            <tag> Github </tag>
-            
-        </tags>
-        
-    </entry>
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://NicolasGui.github.io/2017/12/18/web前端面试题/&title=《web前端面试题-2017》 — Don't BB,show me the code!&pic=http://NicolasGui.github.io/img/logo.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://NicolasGui.github.io/2017/12/18/web前端面试题/&title=《web前端面试题-2017》 — Don't BB,show me the code!&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://NicolasGui.github.io/2017/12/18/web前端面试题/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《web前端面试题-2017》 — Don't BB,show me the code!&url=http://NicolasGui.github.io/2017/12/18/web前端面试题/&via=http://NicolasGui.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://NicolasGui.github.io/2017/12/18/web前端面试题/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
     
-    <entry>
-      <title><![CDATA[前端常用开发工具]]></title>
-      <url>/2017/04/26/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</url>
-      <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本文分享了前端常用开发工具以及在开发/过程中常用软件，收费软件附带破解，免费且百度能下载的软件烦请自行百度下载</p>
-<hr>
-<h2 id="软件列表"><a href="#软件列表" class="headerlink" title="软件列表"></a>软件列表</h2><h3 id="开发类"><a href="#开发类" class="headerlink" title="开发类"></a>开发类</h3><ul>
-<li>Webstrom</li>
-<li>editplus</li>
-<li>JDK1.7</li>
-<li>adt-bundle</li>
-<li>MindManager</li>
-<li>Fireworks_cs6</li>
-<li>Adobe Photoshop CC 2017</li>
-<li>代码压缩工具</li>
-<li>node6.10</li>
-<li>颜色拾取器</li>
-<li>xampp</li>
-<li>topspeeder</li>
-<li>AxureRP-Pro</li>
-</ul>
-<hr>
-<h3 id="办公类"><a href="#办公类" class="headerlink" title="办公类"></a>办公类</h3><ul>
-<li>wps</li>
-<li>Microsoft Office 2016</li>
-<li>pdf</li>
-</ul>
-<hr>
-<h3 id="系统工具类"><a href="#系统工具类" class="headerlink" title="系统工具类"></a>系统工具类</h3><ul>
-<li>Microsoft.framework4.0</li>
-<li>winrar</li>
-</ul>
-<hr>
-<p>百度网盘地址：<a href="https://pan.baidu.com/s/1jIaALZS" target="_blank" rel="external">点我</a> ,密码：9h7i</p>
-]]></content>
-      
-        <categories>
-            
-            <category> All </category>
-            
-            <category> tools </category>
-            
-        </categories>
+    <nav class="post-nav flex-row flex-justify-between">
         
-        
-        <tags>
+            <div class="waves-block waves-effect prev">
+                <a href="/2017/12/18/web前端面试题之vue/" id="post-prev" class="post-nav-link">
+                    <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i>上一篇</div>
+                    <h4 class="title">
+                        web前端面试题之vue
+                    </h4>
+                </a>
+            </div>
             
-            <tag> All </tag>
-            
-            <tag> web前端 </tag>
-            
-            <tag> 开发工具 </tag>
-            
-        </tags>
-        
-    </entry>
+
+                
+                    <div class="waves-block waves-effect next">
+                        <a href="/2017/10/26/Hexo+Github搭建个人博客/" id="post-next" class="post-nav-link">
+                            <div class="tips">下一篇 <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+                            <h4 class="title">
+                                Hexo+Github搭建个人博客
+                            </h4>
+                        </a>
+                    </div>
+                    
+    </nav>
     
-    <entry>
-      <title><![CDATA[使用mac自带阿帕奇]]></title>
-      <url>/2017/02/24/%E4%BD%BF%E7%94%A8mac%E8%87%AA%E5%B8%A6%E9%98%BF%E5%B8%95%E5%A5%87/</url>
-      <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Apache对于前端程序员来说是必不可少的一款web服务器，Mac系统自身带了apache，可以直接用来搭建本地web服务器，配置过程相对比较简单，本文将做简要描述，开始吧</p>
-<h3 id="启动Apache"><a href="#启动Apache" class="headerlink" title="启动Apache"></a>启动Apache</h3><p>mac是默认自动启动Apache的，判断mac是否启动了Apache很简单，浏览器地址栏输入<a href="http://127.0.0.1" target="_blank" rel="external">http://127.0.0.1</a>   回车即可，如果页面显示It works！证明ok，介绍几个常用命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sudo apachectl start   //开启apache</div><div class="line"></div><div class="line">sudo apachectl restart   //重启apache</div><div class="line"></div><div class="line">sudo apachectl stop    //关闭apache:</div></pre></td></tr></table></figure>
-<h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><h4 id="更改work-space"><a href="#更改work-space" class="headerlink" title="更改work space"></a>更改work space</h4><p>Apache在Windows下默认work space为htdocs，在mac下有所区别，路径为：/Library/WebServer/Documents<br>因此我们需要把前端代码拷贝到该目录进行测试，但是该目录藏这么深在实际使用过程中显然是比较麻烦的，因此接下来我们通过修改阿帕奇主配置文件httpd.conf来指定work space，步骤如下：<br>mac配置文件目录为：/etc ，默认是隐藏的，因此咱们在终端里面执行：open /etc/apache2/  就可以打开Apache主目录，找到httpd.conf文件，使用文本编辑器打开该文件， 如果不想那么麻烦的话可以使用vi编辑，命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vi /etc/apache2/httpd.conf</div></pre></td></tr></table></figure>
-<p>编辑以下内容，原本为：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">DocumentRoot <span class="string">"/Library/WebServer/Documents"</span></div><div class="line">&lt;Directory <span class="string">"/Library/WebServer/Documents"</span>&gt;</div></pre></td></tr></table></figure></p>
-<p>修改为自定义目录，比如我改成根目录的sites文件夹，那就是：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">DocumentRoot <span class="string">"/Users/用户名/Sites"</span></div><div class="line">&lt;Directory <span class="string">"/Users/用户名/Sites"</span>&gt;</div></pre></td></tr></table></figure></p>
-<p>这样子的话我们就可以把Apache的work space更改到根路径下的sites了，需要注意的是，如果使用sudo vi /etc/apache2/httpd.conf命令打开，那么你需要先按一下i才能编辑，编辑完了以后按下esc，然后输入:wq回车就可以保存退出了</p>
-<h4 id="更改默认端口"><a href="#更改默认端口" class="headerlink" title="更改默认端口"></a>更改默认端口</h4><p>跟更改默认工作空间一样的方式打开httpd.conf，找到Listen 80这一行，将80改为你需要的端口就好</p>
-<h4 id="显示文件目录"><a href="#显示文件目录" class="headerlink" title="显示文件目录"></a>显示文件目录</h4><p>Apache在没有index的情况下默认不会显示文件目录，可以通过修改httpd.conf实现文件列表的展示，方便调试操作如下：<br>将httpd.conf里面Options FollowSymLinks Multiviews之后加上Indexes，修改之后为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Options FollowSymLinks Multiviews Indexes</div></pre></td></tr></table></figure></p>
-]]></content>
-      
-        <categories>
-            
-            <category> All </category>
-            
-            <category> mac </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> All </tag>
-            
-            <tag> mac </tag>
-            
-            <tag> 服务器 </tag>
-            
-        </tags>
-        
-    </entry>
+
     
-    <entry>
-      <title><![CDATA[vue-router插件]]></title>
-      <url>/2017/01/26/vue-router/</url>
-      <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>vue-router就是SPA（单页应用）的路径管理器。通俗的说，vue-router就是我们WebApp的链接路径管理系统。它跟前端的a标签区别是什么？因为我们用Vue做的是单页应用，就相当于只有一个主的index.html页面，所以你写的a标签是不起作用的，你必须使用vue-router来对路径进行管理。</p>
-<h3 id="安装vue-router"><a href="#安装vue-router" class="headerlink" title="安装vue-router"></a>安装vue-router</h3><p>vue-router是一个插件，所以需要用npm来进行安装的。在命令行工具里面，进入你的项目目录，输入下面命令。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install vue-router --save</div></pre></td></tr></table></figure></p>
-<p>如果你是通过vue-cli构建项目时已经选择安装了vue-router，那就不需要重复安装。如果npm install vue-router –save安装比较慢的话，切换到淘宝镜像然后使用cnpm install vue-router –save，切换方法如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure></p>
-<h3 id="vue-router文件解读"><a href="#vue-router文件解读" class="headerlink" title="vue-router文件解读"></a>vue-router文件解读</h3><p>安装完vue-router，我们先在src/router/路径下找到index.js文件，这个js就是路由的核心文件，打开<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">import Vue from <span class="string">'vue'</span>   //引入Vue</div><div class="line">import Router from <span class="string">'vue-router'</span>  //引入vue-router</div><div class="line">import Hello from <span class="string">'@/components/Hello'</span>  //引入默认的Hello.vue组件</div><div class="line">import Test from <span class="string">'@/components/Test'</span>  //引入测试vue组件</div><div class="line"></div><div class="line">Vue.use(Router)  //全局使用Router</div><div class="line"> </div><div class="line"><span class="built_in">export</span> default new Router(&#123;//配置路由</div><div class="line">  routes: [              </div><div class="line">    &#123;                    //每一个对象代表一个路由</div><div class="line">      path: <span class="string">'/'</span>,         //链接路径</div><div class="line">      name: <span class="string">'Hello'</span>,     //路由名称，</div><div class="line">      component: Hello   //对应的组件模板</div><div class="line">    &#125;,&#123;</div><div class="line">      path:<span class="string">'/Test'</span>,</div><div class="line">      name:<span class="string">'Test'</span>,</div><div class="line">      component:Test</div><div class="line">    &#125;</div><div class="line">  ]</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
-<p>然后我们就可以在App.vue里面通过router-view来展示我们的组件内容</p>
-<h3 id="router-link"><a href="#router-link" class="headerlink" title="router-link"></a>router-link</h3><p>我们说router是做路径管理的，那么我们就可以通过router-link来控制组件的切换<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;router-link to=<span class="string">"组件路径"</span>&gt;链接内容&lt;/router-link&gt;</div></pre></td></tr></table></figure></p>
-<p>在这里解释一下，to：是我们的导航路径，要填写的是你在router/index.js文件里配置的path值，如果要导航到默认首页，只需要写成  to=”/” ，比如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;ul&gt;</div><div class="line">   &lt;li&gt;&lt;router-link to=<span class="string">"/"</span>&gt;首页&lt;/router-link&gt;&lt;/li&gt;</div><div class="line">   &lt;li&gt;&lt;router-link to=<span class="string">"/Test"</span>&gt;Test页面&lt;/router-link&gt;&lt;/li&gt;   </div><div class="line">&lt;/ul&gt;</div></pre></td></tr></table></figure></p>
-]]></content>
-      
-        <categories>
-            
-            <category> All </category>
-            
-            <category> vue </category>
-            
-        </categories>
+
+
+
+
+
+<section class="comments" id="comments">
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script src="http://v2.uyan.cc/code/uyan.js?uid=2135369"></script>
+    <!-- UY END -->
+</section>
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        不信你敢扫 →_→
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
         
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
         
-        <tags>
-            
-            <tag> All </tag>
-            
-            <tag> vue </tag>
-            
-            <tag> web前端 </tag>
-            
-            <tag> 路由 </tag>
-            
-        </tags>
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
         
-    </entry>
-    
-  
-  
-</search>
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+    </div>
+    <div class="bottom">
+        <p><span><a href="https://github.com/NicolasGui">Nicolas</a> &copy; 2016 - 2017</span>
+            <span>
+                
+                蜀ICP备16004629号
+                
+            </span>
+        </p>
+    </div>
+
+
+</footer>
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://NicolasGui.github.io/2017/12/18/web前端面试题/&title=《web前端面试题-2017》 — Don't BB,show me the code!&pic=http://NicolasGui.github.io/img/logo.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://NicolasGui.github.io/2017/12/18/web前端面试题/&title=《web前端面试题-2017》 — Don't BB,show me the code!&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://NicolasGui.github.io/2017/12/18/web前端面试题/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《web前端面试题-2017》 — Don't BB,show me the code!&url=http://NicolasGui.github.io/2017/12/18/web前端面试题/&via=http://NicolasGui.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://NicolasGui.github.io/2017/12/18/web前端面试题/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://NicolasGui.github.io/2017/12/18/web前端面试题/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.0"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.0" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
