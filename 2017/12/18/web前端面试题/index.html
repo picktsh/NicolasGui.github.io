@@ -33,7 +33,7 @@
 <meta property="og:site_name" content="Don&#39;t BB,show me the code!">
 <meta property="og:description" content="基础部分一个优秀的前端开发人员需要具备哪些特质？ 学习能力 代码可维护性 代码规范性 解决问题的能力 沟通能力  常见的布局方式有哪些？ table布局 流式布局 弹性布局 响应式布局  css预加载的使用？less、sacc 常见的解决浏览器兼容性问题的方式有哪些？html5有哪些新特性及其使用场合？如何解决兼容性问题介绍一下标准的css的盒子模型？如何居中div，如何居中一个浮动元素？如何让绝">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-18T13:12:37.000Z">
+<meta property="og:updated_time" content="2017-12-18T13:18:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="web前端面试题-2017">
 <meta name="twitter:description" content="基础部分一个优秀的前端开发人员需要具备哪些特质？ 学习能力 代码可维护性 代码规范性 解决问题的能力 沟通能力  常见的布局方式有哪些？ table布局 流式布局 弹性布局 响应式布局  css预加载的使用？less、sacc 常见的解决浏览器兼容性问题的方式有哪些？html5有哪些新特性及其使用场合？如何解决兼容性问题介绍一下标准的css的盒子模型？如何居中div，如何居中一个浮动元素？如何让绝">
@@ -215,9 +215,11 @@
 <li>2、确定容器的宽高，这里宽度是必须的，高度可以不设，设置外层的上外边距和左外边距分别是宽高的一半。<pre><code>实现居中关键在于 margin设置与 position:relative.
 </code></pre></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.div &#123;</div><div class="line">    width:500px ;</div><div class="line">    height:300px;</div><div class="line">    margin: -150px 0 0 -250px;</div><div class="line">    position:relative;</div><div class="line">    left:50%;</div><div class="line">    top:50%;</div><div class="line">   &#125;</div><div class="line">   c.position:absolute;</div><div class="line">		top: 50%;</div><div class="line">		left: 50%; 只能把div定位在以红色圈为起点的位置，加上margin:-100px 0px 0px -100</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.div &#123;</div><div class="line">    width:500px ;</div><div class="line">    height:300px;</div><div class="line">    margin: -150px 0 0 -250px;</div><div class="line">    position:relative;</div><div class="line">    left:50%;</div><div class="line">    top:50%;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
 <ul>
-<li>3、position+transform</li>
+<li>3、position+transform<br>  c.position:absolute;<pre><code>top: 50%;
+left: 50%; /*只能把div定位在以红色圈为起点的位置，加上margin:-100px 0px 0px -100*/
+</code></pre></li>
 </ul>
 <h3 id="display设置为inline-block时，li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？"><a href="#display设置为inline-block时，li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？" class="headerlink" title="display设置为inline-block时，li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？"></a>display设置为inline-block时，li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？</h3><blockquote>
 <p>行框的排列会受到中间空白（回车空格等等）的影响，这些空白也会被应用样式，占据空间，所以会有间隔<br>    解决：设置ul的font-size为0，缺陷是必须重新在li中去设置字体大小</p>
@@ -603,7 +605,7 @@ event.cancelBubble();
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-12-18T13:12:37.000Z" itemprop="dateUpdated">2017-12-18 21:12:37</time>
+    最后更新时间：<time datetime="2017-12-18T13:18:47.000Z" itemprop="dateUpdated">2017-12-18 21:18:47</time>
 </span><br>
 
 
@@ -683,24 +685,15 @@ event.cancelBubble();
     </div>
 
     
-    <nav class="post-nav flex-row flex-justify-between">
+    <nav class="post-nav flex-row flex-justify-between flex-row-reverse">
         
-            <div class="waves-block waves-effect prev">
-                <a href="/2017/12/18/web前端面试题之vue/" id="post-prev" class="post-nav-link">
-                    <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i>上一篇</div>
-                    <h4 class="title">
-                        web前端面试题之vue
-                    </h4>
-                </a>
-            </div>
-            
 
                 
                     <div class="waves-block waves-effect next">
-                        <a href="/2017/10/26/Hexo+Github搭建个人博客/" id="post-next" class="post-nav-link">
+                        <a href="/2017/12/18/web前端面试题之vue/" id="post-next" class="post-nav-link">
                             <div class="tips">下一篇 <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
                             <h4 class="title">
-                                Hexo+Github搭建个人博客
+                                web前端面试题之vue
                             </h4>
                         </a>
                     </div>
