@@ -3,6 +3,187 @@
   
     
     <entry>
+      <title><![CDATA[mac常用命令]]></title>
+      <url>/2017/12/19/mac%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      <content type="html"><![CDATA[<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><blockquote>
+<p>pwd 命令</p>
+</blockquote>
+<p>作用：<br>   用于显示当前操作的路径位置(当前工作文件夹)</p>
+<hr>
+<blockquote>
+<p>ls 命令:</p>
+</blockquote>
+<p>作用：<br>   显示指定目录的文件或文件夹信息<br>格式:<br>  ls [选项] [文件夹名/文件名]<br>常用选项:<br>  -l  列表显示文件的详细信息<br>  -a  显示全部文件/文件夹<br>示例:<br>  $ ls<br>  $ ls -l  # 列表显示<br>  $ ls -a  # 显示隐藏的文件和文件夹<br>  $ ls -la  列表显示全部 等同于 ls -l -a</p>
+<p>  路径分两种：<br>    绝对路径<br>    相对路径</p>
+<p>绝对路径:<br>  以 / 字符开头的路径为绝对路径<br>  一个文件通常它的绝对路径是唯一的<br>相对路径:<br>  不以 / 开头的路径<br>相对路径的开始符号:<br>  .  当前文件夹<br>  .. 上一级文件夹<br>  ~  用户主目录</p>
+<hr>
+<blockquote>
+<p>mkdir 命令</p>
+</blockquote>
+<p>作用<br>  创建一个或多个文件夹<br>格式:<br>  mkdir [选项] 文件夹1 文件夹2 …<br>例如:<br>  mkdir a b c<br>常用选项:<br>  -p 逐级创建文件夹<br>  $ mkdir -p a/b/c/d  </p>
+<hr>
+<blockquote>
+<p>rmdir 命令:</p>
+</blockquote>
+<p>作用：<br>　　删除一个或多个文件夹(文件夹内必须为空)<br>格式:<br>  rmdir 文件或文件夹</p>
+<hr>
+<blockquote>
+<p>rm 命令:</p>
+</blockquote>
+<p>作用：<br>　　删除文件或文件夹<br>格式:<br>  rm [选项] 文件或文件夹<br>常用选项:<br>  -r 删除全部文件或文件夹（包含文件夹内的全部)<br>  -i 删除前提示(y代表yes, n代表no)<br>  -f 强制删除，不给任何提示</p>
+<hr>
+<blockquote>
+<p>touch命令:</p>
+</blockquote>
+<p>作用：<br>　　１．　如果文件不存在则创建一个文件<br>　　２．　如果文件存在，则用系统时间更新它的修改时间<br>格式:<br>  touch　文件或文件夹
+　　</p>
+<hr>
+<blockquote>
+<p>cd 命令:</p>
+</blockquote>
+<p>作用：<br>　　改变当前工作目录(进入某个目录)<br>格式:<br>  cd 路径</p>
+<blockquote>
+<p>Tab 键</p>
+</blockquote>
+<p>作用：<br>  命令补全<br>  路径补全<br>  提示</p>
+<blockquote>
+<p>history命令</p>
+</blockquote>
+<p>  用于查看以前输入过的历史命令<br>格式:<br>  $ history &lt;回车&gt;</p>
+<blockquote>
+<p>命令的帮助:</p>
+</blockquote>
+<p>  三种方法:</p>
+<pre><code>1.  $ 命令名 --help
+2.  $ man 命令名
+    注：q 键退出
+3.  $ help 命令名
+</code></pre><blockquote>
+<p>通配符:</p>
+</blockquote>
+<ul>
+<li>代表0个，1个或多个任意字符<br>? 代表1个任意字符</li>
+</ul>
+<p>示例:<br>  touch a ab ac abc aabb bc cd<br>  a<em> 代表以a开头的文件<br>  a</em>b  代表以a开头，以b结尾的文件<br>  思考：<br>    查看 以a开头， 以b 结尾，中间还有一个字符d的文件<br>      ????<br>    ls a<em>d</em>b<br>  a?  –&gt; ab ac<br>  ?c  –&gt; ac bc<br>  思考<br>    删除文件名只有两个字符的文件<br>    rm ??</p>
+<blockquote>
+<p>cp 命令  –&gt;copy(简写)</p>
+</blockquote>
+<p>作用：复制文件或文件夹<br>格式:<br>  cp [选项] 原文件夹/文件名  目的文件夹/文件名<br>常用选项:<br>  -a 复制文件夹内的内容<br>例：<br>  cp test.txt test1.txt<br>  cp test.txt ~<br>  cd ..<br>  cp -a somedir ~  # 复制 somedir文件夹到用户主目录下</p>
+<blockquote>
+<p>clear 命令</p>
+</blockquote>
+<p>作用：<br>   清屏<br>格式:<br>   $ clear&lt;回车&gt;<br>   快捷键 ctrl + l</p>
+<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><blockquote>
+<p>find 命令:</p>
+</blockquote>
+<p>作用：<br>  根据文件名查找文件<br>格式:<br>  find 路径 -name “文件名”</p>
+<p>示例：</p>
+<h1 id="查找-“hello-txt”-文件"><a href="#查找-“hello-txt”-文件" class="headerlink" title="查找 “hello.txt” 文件"></a>查找 “hello.txt” 文件</h1><p>  $ find /home/user -name “txt.py”<br>  $ find . -name “*.mp3”<br>  $ find / -name “hello.txt”</p>
+<blockquote>
+<p>grep 命令:</p>
+</blockquote>
+<p>作用：<br>  根据文件内容查找相应的文件<br>格式:<br>  grep “内容” [选项] 文件名或路径<br>常用选项:<br>  -n 显示行号<br>  -R/-r 递归搜索文件夹内的文件或文件夹</p>
+<blockquote>
+<p>gzip 命令:</p>
+</blockquote>
+<p>作用：<br>  将文件以zip 压缩算法进行压缩,生成压缩后的文件<br>格式:<br>  gzip 文件名</p>
+<blockquote>
+<p>gunzip 命令</p>
+</blockquote>
+<p>作用：<br>  对用zip压缩算法生成的.gz 文件进行解压缩<br>格式:<br>  gunzip 文件名</p>
+<p>示例：<br>  $ cp /etc/passwd .<br>  $ ls -l passwd  # 能看见这个文件的大小???<br>  $ gzip passwd  # 生成压缩后的文件passwd.gz<br>  $ ls -l passwd*  #  查看<br>  $ gunzip passwd.gz  # 解压缩文件</p>
+<p>数据压缩算法的种类:<br>  无损压缩<br>    .zip .gz .png .gif .rar .xz<br>  有损压缩<br>    .mp3 .mp4 .jpg</p>
+<blockquote>
+<p>tar 命令:</p>
+</blockquote>
+<p>作用：<br>  对文件或文件夹进行打包和解包的操作<br>格式:<br>  tar [选项] 文件名 [文件名或路径]<br>选项<br>  -c        创建包<br>  -x        解包<br>  -f 文件名  指定文件名<br>  -v        显示操作的文件<br>  -z        用gzip/gunzip 对包进行压缩和解压缩操作<br>  -C 路径    改变解包的路径</p>
+<p>示例:</p>
+<p>  #　将mac 文件夹打包为mac.tar 文件<br>  tar -c -f mac.tar linux<br>　　tar -c -z -f mac.tar.gz mac  # 打包同时压缩</p>
+<h1 id="常用的选项"><a href="#常用的选项" class="headerlink" title="常用的选项:"></a>常用的选项:</h1><h1 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h1><p>  tar -czvf mac.tar.gz 源文件夹</p>
+<h1 id="解包"><a href="#解包" class="headerlink" title="解包:"></a>解包:</h1><p>  tar -xzvf mac.tar.gz </p>
+<blockquote>
+<p>cat 命令</p>
+</blockquote>
+<p>作用：<br>　　将文件内容显示到屏幕输出<br>格式:<br>  cat 文件1　文件2　…<br>例：<br>  cat passwd</p>
+<blockquote>
+<p>less 命令:</p>
+</blockquote>
+<p>作用:<br>  显示文本文件的内容到屏幕(可以上下回滚)<br>基本操作:<br>  q    退出<br>  j    下翻<br>  k    上翻<br>  空格 下翻一页</p>
+<blockquote>
+<p>文件权限</p>
+</blockquote>
+<p>  查看文件权限:<br>    ls -l<br>文件权限的类型:<br>  r 读权限<br>  w 写权限<br>  x 执行权限</p>
+<ul>
+<li>无权限<br>文件权限分组:<br>用户权限(usr)  组权限(group)  其它(other)<br> ???             ???          ???</li>
+</ul>
+<p>最高权限：<br>  rwx rwx rwx<br>最低权限</p>
+<hr>
+<p>管理员帐号:<br>  windows    下  administrator<br>  UNIX/Linux 下  root</p>
+<blockquote>
+<p>chmod 命令</p>
+</blockquote>
+<p>作用：<br>  用来修改文件权限<br>格式:<br>  chmod 权限 文件名或文件夹名<br>权限<br>  u   用户(所有者/属主)<br>  g   同组用户(属组)<br>  o   其它用户(other)<br>  a   所有用户</p>
+<ul>
+<li>添加权限</li>
+</ul>
+<ul>
+<li>去限权限<br>777 最高权限<br>000 最低权限</li>
+</ul>
+<p>示例:<br>  chmod g-w a 让文件的同组用户不能写此文件</p>
+<p>1 1 1     二进制的等同于: 1<em>2**2 + 1</em>2<strong>1 + 1*2</strong>0</p>
+<p>1 1 1.1   十进制等同于<br>      1<em>10**2 + 1</em>10<strong>1 + 1*10</strong>0 + 1<em>10*</em>-1</p>
+<p>二进制:<br>000      0  —<br>001      1  –x<br>010      2  -w-<br>011      3  -wx<br>100      4  r–<br>101      5<br>110      6<br>111      7</p>
+<h2 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h2><blockquote>
+<p>ps 命令:</p>
+</blockquote>
+<p>作用：<br>  查看进程<br>格式:<br>  ps [选项]<br>选项:<br>  -aux 查看当前Linux系统内所有的进程信息<br>例:<br>  ps -aux &lt;回车&gt;</p>
+<blockquote>
+<p>kill 命令:</p>
+</blockquote>
+<p>作用：<br>    杀死进程<br>格式<br>  kill 进程的PID号<br>例:<br>  kill xxxx</p>
+<blockquote>
+<p>sudo 命令:</p>
+</blockquote>
+<p>作用：<br>　　用超级用户root权限来执行这些命令<br>格式:<br>  sudo 命令 [选项] [参数]</p>
+<p>选项<br>  -i 进入root 用户<br>示例:<br>  $ sudo -i</p>
+<p>  # </p>
+<blockquote>
+<p>exit命令:</p>
+</blockquote>
+<p>  作用：退出用户登陆</p>
+<blockquote>
+<p>输出重定向</p>
+</blockquote>
+<p>  输出分为两种：<br>  　　标准输出<br>    标准错误输出</p>
+<p>标准输出重定向<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; 将一个命令的标准输出重定向到一个文件</div><div class="line">&gt;&gt; 将一个命令的标准输出 &quot;追加&quot; 到一个文件</div></pre></td></tr></table></figure></p>
+<p>标准错误输入重定向</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">2&gt; 将一个命令的标准错误输出重定向到一个文件</div><div class="line">2&gt;&gt; .....&quot;追加&quot; .....</div></pre></td></tr></table></figure>
+<p>例：<br>　　　find /etc -name “passwd” 2&gt; 2.txt  &gt; 1.txt</p>
+<p>重定向所有输出:<br>  &amp;&gt;  将所有输出重定向到一个文件<br>  &amp;&gt;&gt;  追加</p>
+]]></content>
+      
+        <categories>
+            
+            <category> All </category>
+            
+            <category> mac </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> All </tag>
+            
+            <tag> mac </tag>
+            
+            <tag> 命令 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[web前端面试题之vue]]></title>
       <url>/2017/12/18/web%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B9%8Bvue/</url>
       <content type="html"><![CDATA[<h3 id="请说下具体使用vue的理解？"><a href="#请说下具体使用vue的理解？" class="headerlink" title="请说下具体使用vue的理解？"></a>请说下具体使用vue的理解？</h3><p>答：<br>    1、使用vue不必担心布局更改和类名重复导致的js重写，因为它是靠数据驱动双向绑定，底层是通过Object.defineProperty() 定义的数据 set、get 函数原理实现。<br>    2、组件化开发，让项目的可拓展性、移植性更好，代码重用性更高，就好像农民工建房子，拿起自己的工具包就可以开工。项目经理坐等收楼就好。<br>    3、单页应用的体验零距离接触安卓原生应用，局部组件更新界面，让用户体验更快速省时。<br>    4、js的代码无形的规范，团队合作开发代码可阅读性更高</p>

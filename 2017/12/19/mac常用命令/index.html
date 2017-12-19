@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?079c9cb6195202d8c3b3b1c821dc1486"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>mac常用命令 | Don&#39;t BB,show me the code!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="skyblue">
+    
+    
+    <meta name="keywords" content="All,mac,命令">
+    <meta name="description" content="基本操作 pwd 命令  作用：   用于显示当前操作的路径位置(当前工作文件夹)   ls 命令:  作用：   显示指定目录的文件或文件夹信息格式:  ls [选项] [文件夹名/文件名]常用选项:  -l  列表显示文件的详细信息  -a  显示全部文件/文件夹示例:  $ ls  $ ls -l  # 列表显示  $ ls -a  # 显示隐藏的文件和文件夹  $ ls -la  列表显示">
+<meta name="keywords" content="All,mac,命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mac常用命令">
+<meta property="og:url" content="http://NicolasGui.github.io/2017/12/19/mac常用命令/index.html">
+<meta property="og:site_name" content="Don&#39;t BB,show me the code!">
+<meta property="og:description" content="基本操作 pwd 命令  作用：   用于显示当前操作的路径位置(当前工作文件夹)   ls 命令:  作用：   显示指定目录的文件或文件夹信息格式:  ls [选项] [文件夹名/文件名]常用选项:  -l  列表显示文件的详细信息  -a  显示全部文件/文件夹示例:  $ ls  $ ls -l  # 列表显示  $ ls -a  # 显示隐藏的文件和文件夹  $ ls -la  列表显示">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-19T06:57:31.367Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mac常用命令">
+<meta name="twitter:description" content="基本操作 pwd 命令  作用：   用于显示当前操作的路径位置(当前工作文件夹)   ls 命令:  作用：   显示指定目录的文件或文件夹信息格式:  ls [选项] [文件夹名/文件名]常用选项:  -l  列表显示文件的详细信息  -a  显示全部文件/文件夹示例:  $ ls  $ ls -l  # 列表显示  $ ls -a  # 显示隐藏的文件和文件夹  $ ls -la  列表显示">
+    
+        <link rel="alternate" type="application/atom+xml" title="Don&#39;t BB,show me the code!" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/banner.gif)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/logo.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Nicolas</h5>
+          <a href="mailto:345930282@qq.com" title="345930282@qq.com" class="mail">345930282@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/All"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/NicolasGui" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/512567097" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                About
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">mac常用命令</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">mac常用命令</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-12-19T06:28:45.000Z" itemprop="datePublished" class="page-time">
+  2017-12-19
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/All/">All</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/All/mac/">mac</a></li></ul></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#基本操作"><span class="post-toc-number">1.</span> <span class="post-toc-text">基本操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查找"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">查找</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#查找-“hello-txt”-文件"><span class="post-toc-number">2.</span> <span class="post-toc-text">查找 “hello.txt” 文件</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#常用的选项"><span class="post-toc-number">3.</span> <span class="post-toc-text">常用的选项:</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#打包"><span class="post-toc-number">4.</span> <span class="post-toc-text">打包</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#解包"><span class="post-toc-number">5.</span> <span class="post-toc-text">解包:</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#进程管理"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">进程管理</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-mac常用命令"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">mac常用命令</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-12-19 14:28:45" datetime="2017-12-19T06:28:45.000Z"  itemprop="datePublished">2017-12-19</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/All/">All</a><ul class="article-category-list-child"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/All/mac/">mac</a></li></ul></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><blockquote>
+<p>pwd 命令</p>
+</blockquote>
+<p>作用：<br>   用于显示当前操作的路径位置(当前工作文件夹)</p>
+<hr>
+<blockquote>
+<p>ls 命令:</p>
+</blockquote>
+<p>作用：<br>   显示指定目录的文件或文件夹信息<br>格式:<br>  ls [选项] [文件夹名/文件名]<br>常用选项:<br>  -l  列表显示文件的详细信息<br>  -a  显示全部文件/文件夹<br>示例:<br>  $ ls<br>  $ ls -l  # 列表显示<br>  $ ls -a  # 显示隐藏的文件和文件夹<br>  $ ls -la  列表显示全部 等同于 ls -l -a</p>
+<p>  路径分两种：<br>    绝对路径<br>    相对路径</p>
+<p>绝对路径:<br>  以 / 字符开头的路径为绝对路径<br>  一个文件通常它的绝对路径是唯一的<br>相对路径:<br>  不以 / 开头的路径<br>相对路径的开始符号:<br>  .  当前文件夹<br>  .. 上一级文件夹<br>  ~  用户主目录</p>
+<hr>
+<blockquote>
+<p>mkdir 命令</p>
+</blockquote>
+<p>作用<br>  创建一个或多个文件夹<br>格式:<br>  mkdir [选项] 文件夹1 文件夹2 …<br>例如:<br>  mkdir a b c<br>常用选项:<br>  -p 逐级创建文件夹<br>  $ mkdir -p a/b/c/d  </p>
+<hr>
+<blockquote>
+<p>rmdir 命令:</p>
+</blockquote>
+<p>作用：<br>　　删除一个或多个文件夹(文件夹内必须为空)<br>格式:<br>  rmdir 文件或文件夹</p>
+<hr>
+<blockquote>
+<p>rm 命令:</p>
+</blockquote>
+<p>作用：<br>　　删除文件或文件夹<br>格式:<br>  rm [选项] 文件或文件夹<br>常用选项:<br>  -r 删除全部文件或文件夹（包含文件夹内的全部)<br>  -i 删除前提示(y代表yes, n代表no)<br>  -f 强制删除，不给任何提示</p>
+<hr>
+<blockquote>
+<p>touch命令:</p>
+</blockquote>
+<p>作用：<br>　　１．　如果文件不存在则创建一个文件<br>　　２．　如果文件存在，则用系统时间更新它的修改时间<br>格式:<br>  touch　文件或文件夹
+　　</p>
+<hr>
+<blockquote>
+<p>cd 命令:</p>
+</blockquote>
+<p>作用：<br>　　改变当前工作目录(进入某个目录)<br>格式:<br>  cd 路径</p>
+<blockquote>
+<p>Tab 键</p>
+</blockquote>
+<p>作用：<br>  命令补全<br>  路径补全<br>  提示</p>
+<blockquote>
+<p>history命令</p>
+</blockquote>
+<p>  用于查看以前输入过的历史命令<br>格式:<br>  $ history &lt;回车&gt;</p>
+<blockquote>
+<p>命令的帮助:</p>
+</blockquote>
+<p>  三种方法:</p>
+<pre><code>1.  $ 命令名 --help
+2.  $ man 命令名
+    注：q 键退出
+3.  $ help 命令名
+</code></pre><blockquote>
+<p>通配符:</p>
+</blockquote>
+<ul>
+<li>代表0个，1个或多个任意字符<br>? 代表1个任意字符</li>
+</ul>
+<p>示例:<br>  touch a ab ac abc aabb bc cd<br>  a<em> 代表以a开头的文件<br>  a</em>b  代表以a开头，以b结尾的文件<br>  思考：<br>    查看 以a开头， 以b 结尾，中间还有一个字符d的文件<br>      ????<br>    ls a<em>d</em>b<br>  a?  –&gt; ab ac<br>  ?c  –&gt; ac bc<br>  思考<br>    删除文件名只有两个字符的文件<br>    rm ??</p>
+<blockquote>
+<p>cp 命令  –&gt;copy(简写)</p>
+</blockquote>
+<p>作用：复制文件或文件夹<br>格式:<br>  cp [选项] 原文件夹/文件名  目的文件夹/文件名<br>常用选项:<br>  -a 复制文件夹内的内容<br>例：<br>  cp test.txt test1.txt<br>  cp test.txt ~<br>  cd ..<br>  cp -a somedir ~  # 复制 somedir文件夹到用户主目录下</p>
+<blockquote>
+<p>clear 命令</p>
+</blockquote>
+<p>作用：<br>   清屏<br>格式:<br>   $ clear&lt;回车&gt;<br>   快捷键 ctrl + l</p>
+<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><blockquote>
+<p>find 命令:</p>
+</blockquote>
+<p>作用：<br>  根据文件名查找文件<br>格式:<br>  find 路径 -name “文件名”</p>
+<p>示例：</p>
+<h1 id="查找-“hello-txt”-文件"><a href="#查找-“hello-txt”-文件" class="headerlink" title="查找 “hello.txt” 文件"></a>查找 “hello.txt” 文件</h1><p>  $ find /home/user -name “txt.py”<br>  $ find . -name “*.mp3”<br>  $ find / -name “hello.txt”</p>
+<blockquote>
+<p>grep 命令:</p>
+</blockquote>
+<p>作用：<br>  根据文件内容查找相应的文件<br>格式:<br>  grep “内容” [选项] 文件名或路径<br>常用选项:<br>  -n 显示行号<br>  -R/-r 递归搜索文件夹内的文件或文件夹</p>
+<blockquote>
+<p>gzip 命令:</p>
+</blockquote>
+<p>作用：<br>  将文件以zip 压缩算法进行压缩,生成压缩后的文件<br>格式:<br>  gzip 文件名</p>
+<blockquote>
+<p>gunzip 命令</p>
+</blockquote>
+<p>作用：<br>  对用zip压缩算法生成的.gz 文件进行解压缩<br>格式:<br>  gunzip 文件名</p>
+<p>示例：<br>  $ cp /etc/passwd .<br>  $ ls -l passwd  # 能看见这个文件的大小???<br>  $ gzip passwd  # 生成压缩后的文件passwd.gz<br>  $ ls -l passwd*  #  查看<br>  $ gunzip passwd.gz  # 解压缩文件</p>
+<p>数据压缩算法的种类:<br>  无损压缩<br>    .zip .gz .png .gif .rar .xz<br>  有损压缩<br>    .mp3 .mp4 .jpg</p>
+<blockquote>
+<p>tar 命令:</p>
+</blockquote>
+<p>作用：<br>  对文件或文件夹进行打包和解包的操作<br>格式:<br>  tar [选项] 文件名 [文件名或路径]<br>选项<br>  -c        创建包<br>  -x        解包<br>  -f 文件名  指定文件名<br>  -v        显示操作的文件<br>  -z        用gzip/gunzip 对包进行压缩和解压缩操作<br>  -C 路径    改变解包的路径</p>
+<p>示例:</p>
+<p>  #　将mac 文件夹打包为mac.tar 文件<br>  tar -c -f mac.tar linux<br>　　tar -c -z -f mac.tar.gz mac  # 打包同时压缩</p>
+<h1 id="常用的选项"><a href="#常用的选项" class="headerlink" title="常用的选项:"></a>常用的选项:</h1><h1 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h1><p>  tar -czvf mac.tar.gz 源文件夹</p>
+<h1 id="解包"><a href="#解包" class="headerlink" title="解包:"></a>解包:</h1><p>  tar -xzvf mac.tar.gz </p>
+<blockquote>
+<p>cat 命令</p>
+</blockquote>
+<p>作用：<br>　　将文件内容显示到屏幕输出<br>格式:<br>  cat 文件1　文件2　…<br>例：<br>  cat passwd</p>
+<blockquote>
+<p>less 命令:</p>
+</blockquote>
+<p>作用:<br>  显示文本文件的内容到屏幕(可以上下回滚)<br>基本操作:<br>  q    退出<br>  j    下翻<br>  k    上翻<br>  空格 下翻一页</p>
+<blockquote>
+<p>文件权限</p>
+</blockquote>
+<p>  查看文件权限:<br>    ls -l<br>文件权限的类型:<br>  r 读权限<br>  w 写权限<br>  x 执行权限</p>
+<ul>
+<li>无权限<br>文件权限分组:<br>用户权限(usr)  组权限(group)  其它(other)<br> ???             ???          ???</li>
+</ul>
+<p>最高权限：<br>  rwx rwx rwx<br>最低权限</p>
+<hr>
+<p>管理员帐号:<br>  windows    下  administrator<br>  UNIX/Linux 下  root</p>
+<blockquote>
+<p>chmod 命令</p>
+</blockquote>
+<p>作用：<br>  用来修改文件权限<br>格式:<br>  chmod 权限 文件名或文件夹名<br>权限<br>  u   用户(所有者/属主)<br>  g   同组用户(属组)<br>  o   其它用户(other)<br>  a   所有用户</p>
+<ul>
+<li>添加权限</li>
+</ul>
+<ul>
+<li>去限权限<br>777 最高权限<br>000 最低权限</li>
+</ul>
+<p>示例:<br>  chmod g-w a 让文件的同组用户不能写此文件</p>
+<p>1 1 1     二进制的等同于: 1<em>2**2 + 1</em>2<strong>1 + 1*2</strong>0</p>
+<p>1 1 1.1   十进制等同于<br>      1<em>10**2 + 1</em>10<strong>1 + 1*10</strong>0 + 1<em>10*</em>-1</p>
+<p>二进制:<br>000      0  —<br>001      1  –x<br>010      2  -w-<br>011      3  -wx<br>100      4  r–<br>101      5<br>110      6<br>111      7</p>
+<h2 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h2><blockquote>
+<p>ps 命令:</p>
+</blockquote>
+<p>作用：<br>  查看进程<br>格式:<br>  ps [选项]<br>选项:<br>  -aux 查看当前Linux系统内所有的进程信息<br>例:<br>  ps -aux &lt;回车&gt;</p>
+<blockquote>
+<p>kill 命令:</p>
+</blockquote>
+<p>作用：<br>    杀死进程<br>格式<br>  kill 进程的PID号<br>例:<br>  kill xxxx</p>
+<blockquote>
+<p>sudo 命令:</p>
+</blockquote>
+<p>作用：<br>　　用超级用户root权限来执行这些命令<br>格式:<br>  sudo 命令 [选项] [参数]</p>
+<p>选项<br>  -i 进入root 用户<br>示例:<br>  $ sudo -i</p>
+<p>  # </p>
+<blockquote>
+<p>exit命令:</p>
+</blockquote>
+<p>  作用：退出用户登陆</p>
+<blockquote>
+<p>输出重定向</p>
+</blockquote>
+<p>  输出分为两种：<br>  　　标准输出<br>    标准错误输出</p>
+<p>标准输出重定向<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; 将一个命令的标准输出重定向到一个文件</div><div class="line">&gt;&gt; 将一个命令的标准输出 &quot;追加&quot; 到一个文件</div></pre></td></tr></table></figure></p>
+<p>标准错误输入重定向</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">2&gt; 将一个命令的标准错误输出重定向到一个文件</div><div class="line">2&gt;&gt; .....&quot;追加&quot; .....</div></pre></td></tr></table></figure>
+<p>例：<br>　　　find /etc -name “passwd” 2&gt; 2.txt  &gt; 1.txt</p>
+<p>重定向所有输出:<br>  &amp;&gt;  将所有输出重定向到一个文件<br>  &amp;&gt;&gt;  追加</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-12-19T06:57:31.367Z" itemprop="dateUpdated">2017-12-19 14:57:31</time>
+</span><br>
+
+
+        
+        <br>如果您有好的建议或发现是么问题，欢迎访问个人<a href="https://github.com/NicolasGui" style="color:red;font-size:18px;font-weight:bold;">gitHub</a>发Issues 或 Pull requests，如果觉得还不错的话别忘了⭐   <a href="https://github.com/NicolasGui">to the project🤘</a>
+        
+    </div>
+    <footer>
+        <a href="http://NicolasGui.github.io">
+            <img src="/img/logo.png" alt="Nicolas">
+            Nicolas
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/All/">All</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/命令/">命令</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://NicolasGui.github.io/2017/12/19/mac常用命令/&title=《mac常用命令》 — Don't BB,show me the code!&pic=http://NicolasGui.github.io/img/logo.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://NicolasGui.github.io/2017/12/19/mac常用命令/&title=《mac常用命令》 — Don't BB,show me the code!&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://NicolasGui.github.io/2017/12/19/mac常用命令/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《mac常用命令》 — Don't BB,show me the code!&url=http://NicolasGui.github.io/2017/12/19/mac常用命令/&via=http://NicolasGui.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://NicolasGui.github.io/2017/12/19/mac常用命令/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+    <nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+        
+
+                
+                    <div class="waves-block waves-effect next">
+                        <a href="/2017/12/18/web前端面试题之vue/" id="post-next" class="post-nav-link">
+                            <div class="tips">下一篇 <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+                            <h4 class="title">
+                                web前端面试题之vue
+                            </h4>
+                        </a>
+                    </div>
+                    
+    </nav>
+    
+
+    
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'true';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "6x49PQdS7yFOwmbDyeyib2eI-gzGzoHsz",
+            appKey: "SR793Ao76oLNRRSMVEfoxElA",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        不信你敢扫 →_→
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+    </div>
+    <div class="bottom">
+        <p><span><a href="https://github.com/NicolasGui">Nicolas</a> &copy; 2016 - 2017</span>
+            <span>
+                
+                蜀ICP备16004629号
+                
+            </span>
+        </p>
+    </div>
+
+
+</footer>
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://NicolasGui.github.io/2017/12/19/mac常用命令/&title=《mac常用命令》 — Don't BB,show me the code!&pic=http://NicolasGui.github.io/img/logo.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://NicolasGui.github.io/2017/12/19/mac常用命令/&title=《mac常用命令》 — Don't BB,show me the code!&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://NicolasGui.github.io/2017/12/19/mac常用命令/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《mac常用命令》 — Don't BB,show me the code!&url=http://NicolasGui.github.io/2017/12/19/mac常用命令/&via=http://NicolasGui.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://NicolasGui.github.io/2017/12/19/mac常用命令/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://NicolasGui.github.io/2017/12/19/mac常用命令/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.0"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.0" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
