@@ -3,6 +3,168 @@
   
     
     <entry>
+      <title><![CDATA[js学习之变量&基础数据类型]]></title>
+      <url>/2017/12/19/js%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+      <content type="html"><![CDATA[<h2 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>内存中一块存储一个数据的空间,再起一个名字。<br>何时使用变量?<br>程序中的一切数据都要保存在变量中，反复使用</p>
+<h3 id="如何使用？"><a href="#如何使用？" class="headerlink" title="如何使用？"></a>如何使用？</h3><ul>
+<li><ol>
+<li>创建变量：——声明——创建一个新的空变量<pre><code>语法：var 变量名;
+强调：仅声明，未赋值的变量，默认值是undefined
+</code></pre>  变量命名：见名知义<pre><code>1. *不能以数字开头
+2. *不能用保留字：被js已经占用，有特殊意义的词
+3. 如果又多个单词组成，一般采用驼峰命名：
+    第一个单词首字母小写，其余单词首字母大写
+</code></pre></li>
+</ol>
+</li>
+<li><ol>
+<li>赋值：将数据保存到变量中<pre><code>语法：变量名=数据;
+其中：=就是赋值的意思。
+将等号右边的&quot;数据&quot;，放到等号左边的变量中保存
+</code></pre>强烈建议：在声明同时就赋值<pre><code>语法：var 变量名=数据;
+强调：程序中的赋值，都是*替换*变量中原有旧值
+</code></pre><ol>
+<li>取值：使用变量名，等效于直接使用变量中保存的数据</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>特殊情况：</p>
+<ol>
+<li><em>给未声明过的变量赋值不会出错，程序会在window范围内自动创建同名变量，再赋值。</em>：<br>强烈建议，所有变量用var声明<br>如果不带var，js会自动在之前加：window.<br>变量的本质：都是window环境下的存储空间<br>   var a ==&gt; window.a ==&gt; a</li>
+<li><em>从未声明过的变量中取值一定会出错</em>：ReferenceError</li>
+</ol>
+</blockquote>
+<ol>
+<li><p>变量之间赋值：形如：变量1=变量2;<br>  执行时：将变量2中的数据复制一个副本放入变量1中。 </p>
+<pre><code>变量2中原数据保持不变。
+</code></pre><p>  此后，变量1和变量2之间，不再有任何联系！</p>
+</li>
+<li><p><strong><em>声明提前：在正式执行js脚本之前，js引擎会提前阅读程序中的所有var。将所有变量集中到程序开始位置声明！
+</em></strong>赋值，仍留在原地！<em>*</em><br>比如：console.log(m); //不会出错！输出undefined</p>
+<pre><code>var m=100; 
+console.log(m); //输出100
+</code></pre><p>建议：在程序开始位置集中声明变量</p>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>常量：一旦创建，值不可改变的量<br>何时使用常量？一旦创建，值不希望被篡改时，就要保存为常量<br>语法: const 常量名=值;<br>如何使用常量？用法和变量完全一样！除了不能赋值！</p>
+</li>
+</ol>
+<hr>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>数据在内存中的存储格式<br>为什么要有不同数据类型？不同数据的类型，可执行的操作不同<br>js中数据类型：</p>
+<h3 id="原始类型"><a href="#原始类型" class="headerlink" title="原始类型"></a>原始类型</h3><p>数据直接保存在变量本地的数据类型！</p>
+<ul>
+<li>String</li>
+<li>Number</li>
+<li>Boolean</li>
+<li>undefined</li>
+<li>null</li>
+</ul>
+<h4 id="1-Number"><a href="#1-Number" class="headerlink" title="1. Number"></a>1. Number</h4><p>js中专门保存数字的类型，不带引号！<br>      何时使用：用于计算或比较大小时，都用Number类型<br>      其实数字分两种情况：整数，浮点数(小数)<br>          整数：4字节(byte) 32位<br>          浮点数：8字节(byte) 64位<br>      8Bit=1byte  1KB=1024byte  1MB=1024KB …<br>      8位=1字节<br>          Number类型所占空间和数值大小没有直接关系。<br>          比如：var n=1; n占4字节<br>                var m=100000000; m也占4字节<br><em>*</em>舍入误差：因为计算机无法精确表示1/10，造成的计算误差<br>            不可避免！<br>       近似解决：n.toFixed(2)：将n按2位小数四舍五入！</p>
+<h4 id="2-String类型"><a href="#2-String类型" class="headerlink" title="2. String类型"></a>2. String类型</h4><p>专门保存一串文字的数据类型，字符串必须用引号包裹！<br>何时使用？用于输出或显示的文字都要加双引号</p>
+<ol>
+<li>所占空间：js采用Unicode字符集编码<br>unicode：对全球主要文字的每个字符编一个号<br>js中每个字母，数字，英文标点占1字节<br>js中每个汉字占2字节！<br>比如：“Hello马里奥”<br>1<em>5+2</em>3=11个字节</li>
+<li><em>字符串内容一旦创建不可改变</em>！<br>两个字符串可使用+拼接为1个字符串<br>比如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str1=&quot;Hello&quot;;</div><div class="line">str1=str1+&quot;World&quot;;</div><div class="line">console.log(str1); //共创建3个字符串</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="3-Boolean"><a href="#3-Boolean" class="headerlink" title="3. Boolean"></a>3. Boolean</h4><p>专门定义真假的类型：true false<br>何时使用boolean？如果数据只有两种情况时，可用boolean类型<br>比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var isRain=false</div><div class="line">var isMan=true</div><div class="line">var isClassOver=true</div></pre></td></tr></table></figure></p>
+<h3 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h3><p>数据不保存在变量本地的数据类型！</p>
+]]></content>
+      
+        <categories>
+            
+            <category> All </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> All </tag>
+            
+            <tag> web前端 </tag>
+            
+            <tag> js </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[js学习之起步]]></title>
+      <url>/2017/12/19/js%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B5%B7%E6%AD%A5/</url>
+      <content type="html"><![CDATA[<p>欢迎来到JavaScript学习之路，首先来认识一下web前端三大语言，他们分别是：</p>
+<ul>
+<li>HTML：专门编写网页内容的语言</li>
+<li>CSS：专门美化网页样式的语言</li>
+<li>JavaScript：专门编写网页交互的语言，（输入数据，处理数据，返回结果）</li>
+</ul>
+<hr>
+<h1 id="JavaScript的组成"><a href="#JavaScript的组成" class="headerlink" title="JavaScript的组成"></a>JavaScript的组成</h1><ul>
+<li>ECMAScript(核心语法)</li>
+<li>DOM(专门操作网页内容)</li>
+<li>BOM(专门操作浏览器窗口)</li>
+</ul>
+<h1 id="如何使用JavaScript？"><a href="#如何使用JavaScript？" class="headerlink" title="如何使用JavaScript？"></a>如何使用JavaScript？</h1><hr>
+<h2 id="使用浏览器自带的js引擎："><a href="#使用浏览器自带的js引擎：" class="headerlink" title="使用浏览器自带的js引擎："></a>使用浏览器自带的js引擎：</h2><p>浏览器中包含两个引擎：</p>
+<ul>
+<li>内容排版引擎：负责加载HTML内容，渲染css样式</li>
+<li>js解释器/引擎：负责解释，并执行js程序<br>浏览器控制台：专门调试程序，显示输出结果的浏览器窗口<br>第一行脚本：console.log(“Hello World”);<br>  console指控制台<br>  .翻译为”的”<br>  log是控制台提供的一个现有功能，用来记录一行话<br>ps:控制台编写多行语句：Shift+Enter<br>强调一下：<blockquote>
+<ol>
+<li>js中凡是要输出的正文都要用引号包裹，但单双引号不分</li>
+<li>js区分大小写！js规定小写的名称，就必须小写！</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h2 id="独立安装的js引擎"><a href="#独立安装的js引擎" class="headerlink" title="独立安装的js引擎"></a>独立安装的js引擎</h2><ul>
+<li>node.js   </li>
+<li>V8</li>
+</ul>
+<hr>
+<h1 id="网页中如何编写js"><a href="#网页中如何编写js" class="headerlink" title="网页中如何编写js"></a>网页中如何编写js</h1><ul>
+<li><p>网页中的script元素中：<br> script专门保存js程序的元素<br> script可以写在网页的任何位置，随网页解释执行<br> 脚本：不用编译，直接边解释边执行的程序</p>
+</li>
+<li><p>元素的事件属性中：<br> 事件：用户或浏览器自身触发的动作<br> 事件触发后，才会执行事件处理程序<br> &lt;元素 on事件名=”事件处理程序（js语句）”…<br> &lt;p onclick=”window.alert(‘Hello onclick’)”…</p>
+<pre><code>当单击的时候，请window窗口，弹出警告
+</code></pre></li>
+<li><p>单独的.js文件中集中编写：<br> 执行过程和在script中编写的脚本完全一样！<br> 分2步：</p>
+<ol>
+<li>新建.js文件，包含js程序</li>
+<li>在页面顶端，引入外部js文件：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;路径&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="如何调试js程序？"><a href="#如何调试js程序？" class="headerlink" title="如何调试js程序？"></a>如何调试js程序？</h1><ul>
+<li><ol>
+<li>js中错误：只要希望的功能没执行，说明功能出错了<pre><code>***只要出错先开F12（控制台）***
+</code></pre>控制台中包含：错误类型：错误原因     错误位置链接<br>错误现象：出错位置之前的代码——正常执行<br>同一script中出错位置之后的代码——不执行<br>一个script出错，不影响其他位置script的执行<br>程序错误：bug    处理解决错误：debug</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      
+        <categories>
+            
+            <category> All </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> All </tag>
+            
+            <tag> web前端 </tag>
+            
+            <tag> js </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[mac常用命令]]></title>
       <url>/2017/12/19/mac%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
       <content type="html"><![CDATA[<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><blockquote>
@@ -230,9 +392,9 @@ css的预编译。
             
             <tag> All </tag>
             
-            <tag> vue </tag>
-            
             <tag> web前端 </tag>
+            
+            <tag> vue </tag>
             
             <tag> 面试 </tag>
             
@@ -864,9 +1026,9 @@ event.cancelBubble();
             
             <tag> All </tag>
             
-            <tag> vue </tag>
-            
             <tag> web前端 </tag>
+            
+            <tag> vue </tag>
             
             <tag> 路由 </tag>
             

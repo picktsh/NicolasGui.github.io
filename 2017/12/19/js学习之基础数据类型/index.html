@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?079c9cb6195202d8c3b3b1c821dc1486"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>js学习之变量&amp;基础数据类型 | Don&#39;t BB,show me the code!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="skyblue">
+    
+    
+    <meta name="keywords" content="All,web前端,js">
+    <meta name="description" content="变量：定义内存中一块存储一个数据的空间,再起一个名字。何时使用变量?程序中的一切数据都要保存在变量中，反复使用 如何使用？  创建变量：——声明——创建一个新的空变量语法：var 变量名; 强调：仅声明，未赋值的变量，默认值是undefined   变量命名：见名知义1. *不能以数字开头 2. *不能用保留字：被js已经占用，有特殊意义的词 3. 如果又多个单词组成，一般采用驼峰命名：">
+<meta name="keywords" content="All,web前端,js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js学习之变量&amp;基础数据类型">
+<meta property="og:url" content="http://NicolasGui.github.io/2017/12/19/js学习之基础数据类型/index.html">
+<meta property="og:site_name" content="Don&#39;t BB,show me the code!">
+<meta property="og:description" content="变量：定义内存中一块存储一个数据的空间,再起一个名字。何时使用变量?程序中的一切数据都要保存在变量中，反复使用 如何使用？  创建变量：——声明——创建一个新的空变量语法：var 变量名; 强调：仅声明，未赋值的变量，默认值是undefined   变量命名：见名知义1. *不能以数字开头 2. *不能用保留字：被js已经占用，有特殊意义的词 3. 如果又多个单词组成，一般采用驼峰命名：">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-19T15:06:45.024Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js学习之变量&amp;基础数据类型">
+<meta name="twitter:description" content="变量：定义内存中一块存储一个数据的空间,再起一个名字。何时使用变量?程序中的一切数据都要保存在变量中，反复使用 如何使用？  创建变量：——声明——创建一个新的空变量语法：var 变量名; 强调：仅声明，未赋值的变量，默认值是undefined   变量命名：见名知义1. *不能以数字开头 2. *不能用保留字：被js已经占用，有特殊意义的词 3. 如果又多个单词组成，一般采用驼峰命名：">
+    
+        <link rel="alternate" type="application/atom+xml" title="Don&#39;t BB,show me the code!" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/banner.gif)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/logo.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Nicolas</h5>
+          <a href="mailto:345930282@qq.com" title="345930282@qq.com" class="mail">345930282@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/All"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/NicolasGui" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/512567097" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-link"></i>
+                About
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">js学习之变量&amp;基础数据类型</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">js学习之变量&amp;基础数据类型</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-12-19T14:46:42.000Z" itemprop="datePublished" class="page-time">
+  2017-12-19
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/All/">All</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#变量："><span class="post-toc-number">1.</span> <span class="post-toc-text">变量：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#定义"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何使用？"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">如何使用？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常量"><span class="post-toc-number">2.</span> <span class="post-toc-text">常量</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据类型"><span class="post-toc-number">3.</span> <span class="post-toc-text">数据类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原始类型"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">原始类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-Number"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">1. Number</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-String类型"><span class="post-toc-number">3.1.2.</span> <span class="post-toc-text">2. String类型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-Boolean"><span class="post-toc-number">3.1.3.</span> <span class="post-toc-text">3. Boolean</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#引用类型"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">引用类型</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-js学习之基础数据类型"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">js学习之变量&基础数据类型</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-12-19 22:46:42" datetime="2017-12-19T14:46:42.000Z"  itemprop="datePublished">2017-12-19</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/All/">All</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>内存中一块存储一个数据的空间,再起一个名字。<br>何时使用变量?<br>程序中的一切数据都要保存在变量中，反复使用</p>
+<h3 id="如何使用？"><a href="#如何使用？" class="headerlink" title="如何使用？"></a>如何使用？</h3><ul>
+<li><ol>
+<li>创建变量：——声明——创建一个新的空变量<pre><code>语法：var 变量名;
+强调：仅声明，未赋值的变量，默认值是undefined
+</code></pre>  变量命名：见名知义<pre><code>1. *不能以数字开头
+2. *不能用保留字：被js已经占用，有特殊意义的词
+3. 如果又多个单词组成，一般采用驼峰命名：
+    第一个单词首字母小写，其余单词首字母大写
+</code></pre></li>
+</ol>
+</li>
+<li><ol>
+<li>赋值：将数据保存到变量中<pre><code>语法：变量名=数据;
+其中：=就是赋值的意思。
+将等号右边的&quot;数据&quot;，放到等号左边的变量中保存
+</code></pre>强烈建议：在声明同时就赋值<pre><code>语法：var 变量名=数据;
+强调：程序中的赋值，都是*替换*变量中原有旧值
+</code></pre><ol>
+<li>取值：使用变量名，等效于直接使用变量中保存的数据</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>特殊情况：</p>
+<ol>
+<li><em>给未声明过的变量赋值不会出错，程序会在window范围内自动创建同名变量，再赋值。</em>：<br>强烈建议，所有变量用var声明<br>如果不带var，js会自动在之前加：window.<br>变量的本质：都是window环境下的存储空间<br>   var a ==&gt; window.a ==&gt; a</li>
+<li><em>从未声明过的变量中取值一定会出错</em>：ReferenceError</li>
+</ol>
+</blockquote>
+<ol>
+<li><p>变量之间赋值：形如：变量1=变量2;<br>  执行时：将变量2中的数据复制一个副本放入变量1中。 </p>
+<pre><code>变量2中原数据保持不变。
+</code></pre><p>  此后，变量1和变量2之间，不再有任何联系！</p>
+</li>
+<li><p><strong><em>声明提前：在正式执行js脚本之前，js引擎会提前阅读程序中的所有var。将所有变量集中到程序开始位置声明！
+</em></strong>赋值，仍留在原地！<em>*</em><br>比如：console.log(m); //不会出错！输出undefined</p>
+<pre><code>var m=100; 
+console.log(m); //输出100
+</code></pre><p>建议：在程序开始位置集中声明变量</p>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>常量：一旦创建，值不可改变的量<br>何时使用常量？一旦创建，值不希望被篡改时，就要保存为常量<br>语法: const 常量名=值;<br>如何使用常量？用法和变量完全一样！除了不能赋值！</p>
+</li>
+</ol>
+<hr>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>数据在内存中的存储格式<br>为什么要有不同数据类型？不同数据的类型，可执行的操作不同<br>js中数据类型：</p>
+<h3 id="原始类型"><a href="#原始类型" class="headerlink" title="原始类型"></a>原始类型</h3><p>数据直接保存在变量本地的数据类型！</p>
+<ul>
+<li>String</li>
+<li>Number</li>
+<li>Boolean</li>
+<li>undefined</li>
+<li>null</li>
+</ul>
+<h4 id="1-Number"><a href="#1-Number" class="headerlink" title="1. Number"></a>1. Number</h4><p>js中专门保存数字的类型，不带引号！<br>      何时使用：用于计算或比较大小时，都用Number类型<br>      其实数字分两种情况：整数，浮点数(小数)<br>          整数：4字节(byte) 32位<br>          浮点数：8字节(byte) 64位<br>      8Bit=1byte  1KB=1024byte  1MB=1024KB …<br>      8位=1字节<br>          Number类型所占空间和数值大小没有直接关系。<br>          比如：var n=1; n占4字节<br>                var m=100000000; m也占4字节<br><em>*</em>舍入误差：因为计算机无法精确表示1/10，造成的计算误差<br>            不可避免！<br>       近似解决：n.toFixed(2)：将n按2位小数四舍五入！</p>
+<h4 id="2-String类型"><a href="#2-String类型" class="headerlink" title="2. String类型"></a>2. String类型</h4><p>专门保存一串文字的数据类型，字符串必须用引号包裹！<br>何时使用？用于输出或显示的文字都要加双引号</p>
+<ol>
+<li>所占空间：js采用Unicode字符集编码<br>unicode：对全球主要文字的每个字符编一个号<br>js中每个字母，数字，英文标点占1字节<br>js中每个汉字占2字节！<br>比如：“Hello马里奥”<br>1<em>5+2</em>3=11个字节</li>
+<li><em>字符串内容一旦创建不可改变</em>！<br>两个字符串可使用+拼接为1个字符串<br>比如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str1=&quot;Hello&quot;;</div><div class="line">str1=str1+&quot;World&quot;;</div><div class="line">console.log(str1); //共创建3个字符串</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="3-Boolean"><a href="#3-Boolean" class="headerlink" title="3. Boolean"></a>3. Boolean</h4><p>专门定义真假的类型：true false<br>何时使用boolean？如果数据只有两种情况时，可用boolean类型<br>比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var isRain=false</div><div class="line">var isMan=true</div><div class="line">var isClassOver=true</div></pre></td></tr></table></figure></p>
+<h3 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h3><p>数据不保存在变量本地的数据类型！</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-12-19T15:06:45.024Z" itemprop="dateUpdated">2017-12-19 23:06:45</time>
+</span><br>
+
+
+        
+        <br>如果您有好的建议或发现是么问题，欢迎访问个人<a href="https://github.com/NicolasGui" style="color:red;font-size:18px;font-weight:bold;">gitHub</a>发Issues 或 Pull requests，如果觉得还不错的话别忘了⭐   <a href="https://github.com/NicolasGui">to the project🤘</a>
+        
+    </div>
+    <footer>
+        <a href="http://NicolasGui.github.io">
+            <img src="/img/logo.png" alt="Nicolas">
+            Nicolas
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/All/">All</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web前端/">web前端</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://NicolasGui.github.io/2017/12/19/js学习之基础数据类型/&title=《js学习之变量&基础数据类型》 — Don't BB,show me the code!&pic=http://NicolasGui.github.io/img/logo.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://NicolasGui.github.io/2017/12/19/js学习之基础数据类型/&title=《js学习之变量&基础数据类型》 — Don't BB,show me the code!&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://NicolasGui.github.io/2017/12/19/js学习之基础数据类型/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《js学习之变量&基础数据类型》 — Don't BB,show me the code!&url=http://NicolasGui.github.io/2017/12/19/js学习之基础数据类型/&via=http://NicolasGui.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://NicolasGui.github.io/2017/12/19/js学习之基础数据类型/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+    <nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+        
+
+                
+                    <div class="waves-block waves-effect next">
+                        <a href="/2017/12/19/js学习之起步/" id="post-next" class="post-nav-link">
+                            <div class="tips">下一篇 <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+                            <h4 class="title">
+                                js学习之起步
+                            </h4>
+                        </a>
+                    </div>
+                    
+    </nav>
+    
+
+    
+
+
+<section class="comments" id="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = 'true';
+    lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "6x49PQdS7yFOwmbDyeyib2eI-gzGzoHsz",
+            appKey: "SR793Ao76oLNRRSMVEfoxElA",
+            avatar: "mm",
+            placeholder: "Just go go",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        不信你敢扫 →_→
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+    </div>
+    <div class="bottom">
+        <p><span><a href="https://github.com/NicolasGui">Nicolas</a> &copy; 2016 - 2017</span>
+            <span>
+                
+                蜀ICP备16004629号
+                
+            </span>
+        </p>
+    </div>
+
+
+</footer>
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://NicolasGui.github.io/2017/12/19/js学习之基础数据类型/&title=《js学习之变量&基础数据类型》 — Don't BB,show me the code!&pic=http://NicolasGui.github.io/img/logo.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://NicolasGui.github.io/2017/12/19/js学习之基础数据类型/&title=《js学习之变量&基础数据类型》 — Don't BB,show me the code!&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://NicolasGui.github.io/2017/12/19/js学习之基础数据类型/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《js学习之变量&基础数据类型》 — Don't BB,show me the code!&url=http://NicolasGui.github.io/2017/12/19/js学习之基础数据类型/&via=http://NicolasGui.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://NicolasGui.github.io/2017/12/19/js学习之基础数据类型/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://NicolasGui.github.io/2017/12/19/js学习之基础数据类型/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.0"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.0" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
